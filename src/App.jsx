@@ -1,18 +1,5 @@
 import { useState } from "react";
 
-const ALLERGENS = ["Egg","Peanut","Fish","Wheat","Tree Nuts","Soy","Sesame","Dairy"];
-const COLORS = {"Egg":"#f59e0b","Peanut":"#92400e","Fish":"#0ea5e9","Wheat":"#d97706","Tree Nuts":"#16a34a","Soy":"#7c3aed","Sesame":"#dc2626","Dairy":"#6366f1"};
-const NUTR_COLORS = {"Iron":"#dc2626","Zinc":"#7c3aed","Omega-3":"#0ea5e9","Vitamin C":"#f59e0b","Protein":"#16a34a","Healthy Fats":"#0d9488","Calcium":"#6366f1","Fibre":"#92400e"};
-
-function NutrBadge({label}) {
-  const c = NUTR_COLORS[label]||"#6b7280";
-  return <span style={{background:c+"18",color:c,border:`1px solid ${c}44`,borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700,display:"inline-block",margin:"2px"}}>{label}</span>;
-}
-function AllergenBadge({label}) {
-  const c = COLORS[label]||"#6b7280";
-  return <span style={{background:c+"22",color:c,border:`1px solid ${c}55`,borderRadius:"999px",padding:"2px 8px",fontSize:"11px",fontWeight:600,display:"inline-block",margin:"2px"}}>{label}</span>;
-}
-
 const WEEKS = [
   {
     title:"Week 1", nutritionFocus:"Iron & Omega-3 Foundation",
@@ -26,8 +13,8 @@ const WEEKS = [
         baby:true,
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["4 salmon fillets (150g each)","2 tins (400g) green lentils, drained","4 red peppers, deseeded and sliced","2 tbsp olive oil","1 tsp smoked paprika","½ tsp garlic powder","60g butter","100g full-fat cream cheese (for baby)"],
-          steps:["Preheat oven to 200°C. Spread lentils in a baking dish, mix with garlic powder and a splash of water.","Lay pepper slices around lentils. Drizzle with olive oil.","Nestle salmon fillets on top. Bake 25 mins until salmon flakes and peppers are soft.","BABY: Mash lentils and soft pepper together with cream cheese for calcium and fat. Flake salmon very finely — feel for pin bones. The vitamin C in peppers boosts iron from lentils significantly.","ADULTS: Season with salt and pepper. Serve from the dish."]
+          ingredients:["4 salmon fillets (150g each)","2 tins (400g) green lentils, drained","4 red peppers, deseeded and sliced","2 tbsp Dijon mustard","2 tbsp olive oil (split use)","½ tsp garlic powder","½ tsp onion powder","1 tsp dried thyme","100ml low-sodium stock","100g full-fat cream cheese (for baby)","60g butter"],
+          steps:["Preheat oven to 200°C. Spread lentils in a baking dish, mix with dried thyme, garlic powder and a splash of water.","Lay pepper slices around lentils. Drizzle with 1 tbsp olive oil.","Mix Dijon mustard, garlic powder, onion powder and 1 tbsp olive oil into a glaze. Brush over salmon fillets.","Nestle salmon on top of lentils and peppers. Bake 25 mins until salmon flakes and peppers are soft.","BABY: Mash lentils and soft pepper together with cream cheese. Flake salmon very finely — feel for pin bones. Vitamin C in peppers boosts iron from lentils.","ADULTS: Season with salt and pepper. Serve from the dish."]
         }
       },
       {
@@ -363,63 +350,115 @@ const WEEKLY_SNACKS = [
 
 const GROCERY_LISTS = [
   { week: 1, categories: [
-    { name: "🥩 Meat & Fish", items: ["4 salmon fillets","800g lean beef mince (meatballs)","4 chicken breasts"] },
-    { name: "🥦 Fresh Veg", items: ["4 red peppers","4 medium sweet potatoes","300g kale","Cherry tomatoes (300g)"] },
-    { name: "🥫 Tins & Jars", items: ["4 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)"] },
-    { name: "🌾 Grains & Pasta", items: ["400g pasta (penne or fusilli)","Jasmine rice (large bag)","60g breadcrumbs"] },
-    { name: "🧀 Dairy & Eggs", items: ["Full-fat cream cheese (200g)","Full-fat plain yoghurt (300g)","Parmesan (80g)","8 eggs","Butter"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Smoked paprika","Dried oregano","Dried basil","Ginger powder"] },
+    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","4 chicken breasts"] },
+    { name: "🥦 Fresh Veg", items: ["4 red peppers","4 medium sweet potatoes","300g kale, stems removed","200g baby spinach"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)","2 tbsp Dijon mustard"] },
+    { name: "🌾 Grains & Pasta", items: ["400g pasta (penne or fusilli)","60g breadcrumbs"] },
+    { name: "🧀 Dairy & Eggs", items: ["100g full-fat cream cheese","Parmesan (80g)","2 eggs","Butter"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Onion powder","Dried thyme","Dried oregano","Dried basil","Ginger powder"] },
   ]},
   { week: 2, categories: [
-    { name: "🥩 Meat & Fish", items: ["4 trout fillets","4 chicken thighs (bone-in skin-on)","4 chicken breasts (for Sunday)"] },
-    { name: "🥦 Fresh Veg", items: ["1 large butternut squash","600g cherry tomatoes","400g broccoli florets"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chickpeas (400g each)","4 tbsp tahini"] },
-    { name: "🌾 Grains & Pasta", items: ["400g quinoa","Brown rice (large bag — large batch needed)"] },
-    { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","6 eggs","Full-fat plain yoghurt"] },
+    { name: "🥩 Meat & Fish", items: ["4 trout fillets","4 chicken thighs (bone-in skin-on)","4 chicken breasts (Sunday)"] },
+    { name: "🥦 Fresh Veg", items: ["1 large butternut squash","600g cherry tomatoes","400g broccoli florets","1 lemon"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins chickpeas (400g each)","4 tbsp tahini"] },
+    { name: "🌾 Grains & Pasta", items: ["400g quinoa","800ml low-sodium veg stock","Brown rice (large bag — large batch needed)"] },
+    { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","4 eggs","Full-fat plain yoghurt"] },
     { name: "🥜 Nuts & Seeds", items: ["100g walnuts","100g cashews","Ground sesame seeds (jar)"] },
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup","Garlic powder","Dried thyme","Mild curry powder","Dried rosemary"] },
   ]},
   { week: 3, categories: [
-    { name: "🥩 Meat & Fish", items: ["800g lamb mince","4 tins tuna in spring water (320g total)","4 chicken breasts"] },
-    { name: "🥦 Fresh Veg", items: ["4 courgettes","200g cherry tomatoes","400g broccoli florets","400g frozen edamame"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
-    { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Jasmine rice"] },
-    { name: "🧀 Dairy & Eggs", items: ["Full-fat plain yoghurt (300g)","100g cheddar","200ml whole milk","12 eggs","Butter"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Sesame seeds","Maple syrup (adults)","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
+    { name: "🥩 Meat & Fish", items: ["800g lamb mince","4 tins tuna in spring water (320g total drained)","4 chicken breasts"] },
+    { name: "🥦 Fresh Veg", items: ["4 courgettes, sliced into half moons","200g cherry tomatoes, halved","400g broccoli florets","400g frozen edamame"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)"] },
+    { name: "🌾 Grains & Pasta", items: ["400g soba noodles"] },
+    { name: "🧀 Dairy & Eggs", items: ["300g full-fat plain yoghurt","100g cheddar, grated","200ml whole milk","14 eggs","Butter"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Sesame seeds (to grind)","Maple syrup (adults only)","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
   ]},
   { week: 4, categories: [
     { name: "🥩 Meat & Fish", items: ["4 chicken breasts (Tuesday)","800g lean beef mince","4 salmon fillets"] },
-    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen peas","2 ripe avocados","8 large carrots"] },
+    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen peas","2 ripe avocados","8 large carrots, sliced into coins"] },
     { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","4 tbsp tahini"] },
-    { name: "🌾 Grains & Pasta", items: ["Brown rice (large bag — large batch needed)","600g quinoa"] },
-    { name: "🧀 Dairy & Eggs", items: ["100g full-fat cheddar","6 eggs","100ml whole milk","60g butter","Parmesan (60g)"] },
+    { name: "🌾 Grains & Pasta", items: ["Brown rice (large bag — large batch needed)"] },
+    { name: "🧀 Dairy & Eggs", items: ["100g full-fat cheddar, grated","4 eggs","100ml whole milk","60g butter","60g parmesan, grated"] },
     { name: "🥜 Nuts & Seeds", items: ["100g cashews (to grind)","Ground sesame seeds"] },
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Smoked paprika","Dried thyme","Dried oregano","Turmeric","Ginger powder"] },
   ]},
   { week: 5, categories: [
     { name: "🥩 Meat & Fish", items: ["4 cod fillets","600g chicken mince (or 4 chicken breasts, finely diced)","4 chicken breasts (Sunday)"] },
-    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen edamame","8 large red peppers","400g asparagus"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
+    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes, peeled and cubed","400g frozen edamame, defrosted","8 large red peppers, halved and deseeded","400g asparagus, woody ends removed"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chopped tomatoes (400g each)","4 tsp white miso paste (low sodium)"] },
     { name: "🌾 Grains & Pasta", items: ["Brown rice (large bag — large batch needed)"] },
-    { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","6 eggs","Parmesan (60g)","Full-fat plain yoghurt"] },
-    { name: "🥜 Nuts & Seeds", items: ["160g almonds (to grind)","Ground sesame seeds","Sesame oil"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Ginger powder","Mild curry powder","Turmeric","Dried tarragon","Maple syrup (adults)"] },
+    { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","4 eggs","60g parmesan, grated","Full-fat plain yoghurt"] },
+    { name: "🥜 Nuts & Seeds", items: ["160g almonds (to grind)","Ground sesame seeds (to sprinkle)"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Ginger powder","Mild curry powder","Turmeric","Dried tarragon"] },
   ]},
   { week: 6, categories: [
     { name: "🥩 Meat & Fish", items: ["800g lean beef mince (Tuesday)","800g lean beef mince (Thursday stuffed courgettes)","4 salmon fillets"] },
-    { name: "🥦 Fresh Veg", items: ["4 red peppers","200g baby spinach","8 large courgettes","4 heads pak choi","2 ripe avocados","2 ripe tomatoes"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","4 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)"] },
-    { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Jasmine rice"] },
-    { name: "🧀 Dairy & Eggs", items: ["100g cheddar","6 eggs","Low-sodium chicken stock (500ml)"] },
-    { name: "🥜 Nuts & Seeds", items: ["Ground sesame seeds","Sesame oil"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup (adults)","Garlic powder","Smoked paprika","Dried oregano","Ginger powder","Breadcrumbs (100g)"] },
+    { name: "🥦 Fresh Veg", items: ["4 red peppers, sliced","200g baby spinach, chopped","8 large courgettes","4 heads pak choi, halved","2 ripe avocados"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","4 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)","300ml low-sodium stock (for peanut sauce)"] },
+    { name: "🌾 Grains & Pasta", items: ["400g soba noodles"] },
+    { name: "🧀 Dairy & Eggs", items: ["100g cheddar, grated","80g cheddar, grated (stuffed courgettes)","3 eggs"] },
+    { name: "🥜 Nuts & Seeds", items: ["Ground sesame seeds (1 tbsp for stuffed courgettes)"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup (adults only)","Garlic powder","Smoked paprika","Dried oregano","Ginger powder"] },
   ]},
 ];
+
+
+// ── Colour tokens ──────────────────────────────────────────────
+const C = {
+  bg:        "#faf8f3",
+  card:      "#ffffff",
+  header:    "#3a5240",
+  headerSub: "#8aab8e",
+  accent:    "#3a5240",
+  accentSoft:"#edf3ee",
+  accentMid: "#c8d9c9",
+  cream:     "#fdf8ef",
+  creamBorder:"#e8dfc8",
+  text:      "#2c2c2c",
+  textMid:   "#5a5a5a",
+  textSoft:  "#8a8a8a",
+  border:    "#e4ddd2",
+  baby:      "#fdf3e3",
+  babyBorder:"#e8d5b0",
+  babyText:  "#7a5c2e",
+};
+
+const NUTR_COLORS = {"Iron":"#a84040","Zinc":"#6b52b0","Omega-3":"#3a6fa8","Vitamin C":"#b07820","Protein":"#3a6840","Healthy Fats":"#2a8070","Calcium":"#5050a0","Fibre":"#7a5030"};
+
+function NutrBadge({label}) {
+  const c = NUTR_COLORS[label]||"#666";
+  return <span style={{background:c+"14",color:c,border:`1px solid ${c}30`,borderRadius:"4px",padding:"2px 7px",fontSize:"10px",fontWeight:600,display:"inline-block",margin:"2px",fontFamily:"system-ui,sans-serif",letterSpacing:"0.2px"}}>{label}</span>;
+}
+
+const ALLERGEN_COLORS = {"Egg":"#b07820","Peanut":"#7a4a20","Fish":"#2a6090","Wheat":"#8a6020","Tree Nuts":"#3a6830","Soy":"#5a3a90","Sesame":"#902020","Dairy":"#404090"};
+
+function AllergenBadge({label}) {
+  const c = ALLERGEN_COLORS[label]||"#666";
+  return <span style={{background:c+"12",color:c,border:`1px solid ${c}30`,borderRadius:"20px",padding:"2px 9px",fontSize:"10px",fontWeight:500,display:"inline-block",margin:"2px",fontFamily:"system-ui,sans-serif"}}>{label}</span>;
+}
+
+// Bowl + spoon SVG icon
+function BowlIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{margin:"0 auto 8px",display:"block"}}>
+      <ellipse cx="24" cy="28" rx="16" ry="8" stroke="#c8d9c9" strokeWidth="2" fill="none"/>
+      <path d="M8 28 C8 36 16 42 24 42 C32 42 40 36 40 28" stroke="#c8d9c9" strokeWidth="2" fill="#edf3ee" strokeLinecap="round"/>
+      <ellipse cx="24" cy="28" rx="16" ry="8" fill="#edf3ee" stroke="#c8d9c9" strokeWidth="2"/>
+      <path d="M34 10 C34 10 36 14 36 18 C36 20 35 21 34 21 C33 21 32 20 32 18 L32 10" stroke="#c8d9c9" strokeWidth="2" strokeLinecap="round" fill="none"/>
+      <path d="M34 21 L34 30" stroke="#c8d9c9" strokeWidth="2" strokeLinecap="round"/>
+      <ellipse cx="20" cy="26" rx="4" ry="2" fill="#c8d9c9" opacity="0.5"/>
+    </svg>
+  );
+}
+
+const SF = "Georgia,'Times New Roman',serif";
+const SS = "system-ui,-apple-system,sans-serif";
 
 export default function App() {
   const [tab, setTab] = useState(0);
   const [section, setSection] = useState("meals");
-  const [glossaryTarget, setGlossaryTarget] = useState(null); // {weekIndex, mealIndex}
+  const [glossaryTarget, setGlossaryTarget] = useState(null);
   const week = WEEKS[tab];
 
   const goToRecipe = (weekIndex, mealIndex) => {
@@ -433,108 +472,112 @@ export default function App() {
   };
 
   return (
-    <div style={{minHeight:"100vh",background:"#f0fdf4",fontFamily:"system-ui,sans-serif"}}>
-      {/* Header */}
-      <div style={{background:"linear-gradient(135deg,#14532d,#15803d)",padding:"28px 20px",textAlign:"center"}}>
-        <div style={{fontSize:"28px",marginBottom:"4px"}}>🍽️</div>
-        <h1 style={{color:"white",fontSize:"20px",fontWeight:900,margin:0}}>Family 6-Week Meal Plan</h1>
-        <p style={{color:"#bbf7d0",fontSize:"11px",marginTop:"4px"}}>Nutritionally optimised · Oven-first · Baby-friendly · Prep Monday</p>
-        <div style={{display:"flex",flexWrap:"wrap",gap:"4px",justifyContent:"center",marginTop:"8px"}}>
+    <div style={{minHeight:"100vh",background:C.bg,fontFamily:SS}}>
+
+      {/* ── Header ── */}
+      <div style={{background:C.header,padding:"28px 20px 24px",textAlign:"center"}}>
+        <BowlIcon/>
+        <h1 style={{color:"#f0ebe0",fontSize:"22px",fontWeight:"normal",fontFamily:SF,margin:"0 0 4px",letterSpacing:"0.3px"}}>Family Meal Plan</h1>
+        <p style={{color:C.headerSub,fontSize:"11px",fontFamily:SS,letterSpacing:"0.8px",textTransform:"uppercase",margin:0}}>6 weeks · oven-first · baby-friendly · prep monday</p>
+        <div style={{display:"flex",flexWrap:"wrap",gap:"5px",justifyContent:"center",marginTop:"14px"}}>
           {Object.entries(NUTR_COLORS).map(([k,c])=>(
-            <span key={k} style={{background:c+"33",color:"white",border:`1px solid ${c}55`,borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:600}}>{k}</span>
+            <span key={k} style={{background:c+"25",color:"#e8f0e8",border:`1px solid ${c}40`,borderRadius:"4px",padding:"2px 8px",fontSize:"10px",fontFamily:SS,letterSpacing:"0.2px"}}>{k}</span>
           ))}
         </div>
       </div>
 
-      <div style={{maxWidth:"960px",margin:"0 auto",padding:"16px 12px"}}>
-        {/* Week tabs */}
-        <div style={{display:"flex",gap:"6px",marginBottom:"10px",flexWrap:"wrap"}}>
+      <div style={{maxWidth:"960px",margin:"0 auto",padding:"18px 14px"}}>
+
+        {/* ── Week tabs ── */}
+        <div style={{display:"flex",gap:"6px",marginBottom:"12px",flexWrap:"wrap"}}>
           {WEEKS.map((_,i)=>(
-            <button key={i} onClick={()=>{setTab(i);setSection("meals");setGlossaryTarget(null);}} style={{padding:"8px 16px",borderRadius:"999px",border:"none",cursor:"pointer",fontWeight:700,fontSize:"12px",background:tab===i?"#166534":"white",color:tab===i?"white":"#374151",boxShadow:tab===i?"0 4px 12px #16653440":"0 1px 4px rgba(0,0,0,0.08)",transition:"all 0.15s"}}>
+            <button key={i} onClick={()=>{setTab(i);setGlossaryTarget(null);}} style={{padding:"8px 18px",borderRadius:"24px",border:`1.5px solid ${tab===i?C.accent:C.accentMid}`,cursor:"pointer",fontWeight:tab===i?600:400,fontSize:"13px",fontFamily:SF,background:tab===i?C.accent:C.card,color:tab===i?"#f0ebe0":C.accent,transition:"all 0.15s"}}>
               Week {i+1}
             </button>
           ))}
         </div>
 
-        {/* Section tabs */}
-        <div style={{display:"flex",gap:"5px",marginBottom:"10px",flexWrap:"wrap"}}>
-          {[["meals","🍽️ Meals"],["recipes","📖 Recipes"],["prep","📦 Monday Prep"],["textures","👶 Textures"],["allergens","🌿 Allergens"],["snacks","🍌 Snacks"],["grocery","🛒 Grocery"],["glossary","📋 Glossary"]].map(([id,label])=>(
-            <button key={id} onClick={()=>{setSection(id);setGlossaryTarget(null);}} style={{padding:"6px 12px",borderRadius:"8px",border:`1px solid ${section===id?"#166534":"#e2e8f0"}`,cursor:"pointer",fontSize:"11px",fontWeight:600,background:section===id?"#f0fdf4":"white",color:section===id?"#166534":"#6b7280",transition:"all 0.15s"}}>
+        {/* ── Section tabs ── */}
+        <div style={{display:"flex",gap:"4px",marginBottom:"14px",flexWrap:"wrap"}}>
+          {[["meals","Meals"],["recipes","Recipes"],["prep","Monday Prep"],["textures","Textures"],["allergens","Allergens"],["snacks","Snacks"],["grocery","Grocery"],["glossary","Glossary"]].map(([id,label])=>(
+            <button key={id} onClick={()=>{setSection(id);setGlossaryTarget(null);}} style={{padding:"5px 12px",borderRadius:"6px",border:`1px solid ${section===id?C.accent:C.border}`,cursor:"pointer",fontSize:"11px",fontFamily:SS,fontWeight:section===id?600:400,background:section===id?C.accentSoft:C.card,color:section===id?C.accent:C.textSoft,transition:"all 0.15s",letterSpacing:"0.1px"}}>
               {label}
             </button>
           ))}
         </div>
 
-        {/* Nutrition banner (not on glossary) */}
+        {/* ── Nutrition banner ── */}
         {section !== "glossary" && (
           <>
-            <div style={{background:"#166534",borderRadius:"10px",padding:"10px 14px",marginBottom:"8px",display:"flex",gap:"8px",alignItems:"flex-start"}}>
-              <span style={{fontSize:"16px"}}>🎯</span>
+            <div style={{background:C.header,borderRadius:"12px",padding:"12px 16px",marginBottom:"8px",display:"flex",gap:"10px",alignItems:"flex-start"}}>
               <div>
-                <p style={{color:"#bbf7d0",fontWeight:700,fontSize:"12px",margin:"0 0 2px"}}>{week.nutritionFocus}</p>
-                <p style={{color:"#dcfce7",fontSize:"11px",margin:0,lineHeight:1.5}}>{week.nutritionNote}</p>
+                <p style={{color:"#c8d9c9",fontWeight:600,fontSize:"13px",fontFamily:SF,fontStyle:"italic",margin:"0 0 3px"}}>{week.nutritionFocus}</p>
+                <p style={{color:"#d8e8d8",fontSize:"11px",fontFamily:SS,margin:0,lineHeight:1.6}}>{week.nutritionNote}</p>
               </div>
             </div>
-            <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"8px 12px",marginBottom:"10px"}}>
-              <p style={{color:"#78350f",fontSize:"11px",margin:0,lineHeight:1.5}}>👶 <strong>Baby this week:</strong> {week.babyPortionNote}</p>
+            <div style={{background:C.baby,border:`1px solid ${C.babyBorder}`,borderRadius:"10px",padding:"9px 14px",marginBottom:"12px"}}>
+              <p style={{color:C.babyText,fontSize:"11px",fontFamily:SS,margin:0,lineHeight:1.6}}>👶 <strong>Baby this week:</strong> {week.babyPortionNote}</p>
             </div>
           </>
         )}
 
-        <div style={{background:"white",borderRadius:"16px",padding:"20px",boxShadow:"0 4px 24px rgba(0,0,0,0.07)",border:"1px solid #e2e8f0"}}>
+        {/* ── Main card ── */}
+        <div style={{background:C.card,borderRadius:"18px",padding:"22px",border:`1px solid ${C.border}`}}>
 
-          {/* MEALS TAB */}
+          {/* MEALS */}
           {section==="meals" && (
             <div>
               {week.meals.map((m,i)=>(
-                <div key={i} style={{marginBottom:"14px",background:"#f8fafc",borderRadius:"12px",padding:"12px 14px",border:"1px solid #e2e8f0"}}>
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"6px",marginBottom:"6px"}}>
-                    <span style={{fontSize:"11px",fontWeight:700,color:"#166534",background:"#dcfce7",borderRadius:"6px",padding:"2px 8px"}}>{m.day}</span>
-                    <span style={{fontSize:"11px",color:"#6b7280"}}>🌡️ {m.recipe.temp} · ⏱️ {m.recipe.time}</span>
+                <div key={i} style={{marginBottom:"16px",background:C.bg,borderRadius:"14px",padding:"14px 16px",border:`1px solid ${C.border}`}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"6px",marginBottom:"8px"}}>
+                    <span style={{fontSize:"10px",fontWeight:600,color:C.accent,background:C.accentSoft,borderRadius:"20px",padding:"3px 10px",fontFamily:SS,letterSpacing:"0.5px",textTransform:"uppercase"}}>{m.day}</span>
+                    <span style={{fontSize:"11px",color:C.textSoft,fontFamily:SS}}>{m.recipe.temp} · {m.recipe.time}</span>
                   </div>
-                  <p style={{fontWeight:700,color:"#1e293b",fontSize:"13px",margin:"0 0 6px"}}>{m.meal}</p>
-                  <div style={{marginBottom:"5px"}}>{m.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
-                  <p style={{fontSize:"11px",color:"#6b7280",margin:"4px 0 6px",lineHeight:1.5,fontStyle:"italic"}}>{m.nutritionNotes}</p>
+                  <p style={{fontWeight:"normal",fontFamily:SF,color:C.text,fontSize:"15px",margin:"0 0 8px",lineHeight:1.4}}>{m.meal}</p>
+                  <div style={{marginBottom:"6px"}}>{m.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
+                  <p style={{fontSize:"11px",color:C.textMid,margin:"4px 0 8px",lineHeight:1.6,fontFamily:SS,fontStyle:"italic"}}>{m.nutritionNotes}</p>
                   <div>{m.allergens.map(a=><AllergenBadge key={a} label={a}/>)}</div>
                 </div>
               ))}
             </div>
           )}
 
-          {/* RECIPES TAB */}
+          {/* RECIPES */}
           {section==="recipes" && (
             <div>
               {week.meals.map((m,i)=>(
-                <div key={i} id={`recipe-${tab}-${i}`} style={{marginBottom:"24px",borderBottom:i<week.meals.length-1?"2px solid #f1f5f9":"none",paddingBottom:"20px"}}>
-                  <div style={{display:"flex",flexWrap:"wrap",gap:"5px",alignItems:"center",marginBottom:"10px"}}>
-                    <h3 style={{color:"#14532d",fontSize:"14px",fontWeight:800,margin:"0 0 4px",width:"100%"}}>{m.meal}</h3>
-                    <span style={{background:"#dcfce7",color:"#166534",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>🌡️ {m.recipe.temp}</span>
-                    <span style={{background:"#fef9c3",color:"#92400e",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>⏱️ {m.recipe.time}</span>
-                    <span style={{background:"#f0f9ff",color:"#0369a1",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>👨‍👩‍👶 {m.recipe.serves}</span>
+                <div key={i} id={`recipe-${tab}-${i}`} style={{marginBottom:"28px",borderBottom:i<week.meals.length-1?`1px solid ${C.border}`:"none",paddingBottom:"24px"}}>
+                  <div style={{marginBottom:"12px"}}>
+                    <span style={{fontSize:"10px",fontWeight:600,color:C.accent,background:C.accentSoft,borderRadius:"20px",padding:"3px 10px",fontFamily:SS,letterSpacing:"0.5px",textTransform:"uppercase",marginBottom:"8px",display:"inline-block"}}>{m.day}</span>
+                    <h3 style={{color:C.text,fontSize:"17px",fontWeight:"normal",fontFamily:SF,margin:"6px 0 8px",lineHeight:1.3}}>{m.meal}</h3>
+                    <div style={{display:"flex",flexWrap:"wrap",gap:"5px"}}>
+                      <span style={{background:C.accentSoft,color:C.accent,borderRadius:"6px",padding:"2px 8px",fontSize:"10px",fontFamily:SS,fontWeight:600}}>{m.recipe.temp}</span>
+                      <span style={{background:C.cream,color:C.babyText,borderRadius:"6px",padding:"2px 8px",fontSize:"10px",fontFamily:SS,fontWeight:600,border:`1px solid ${C.creamBorder}`}}>{m.recipe.time}</span>
+                      <span style={{background:C.cream,color:C.textMid,borderRadius:"6px",padding:"2px 8px",fontSize:"10px",fontFamily:SS,border:`1px solid ${C.creamBorder}`}}>{m.recipe.serves}</span>
+                    </div>
                   </div>
-                  <div style={{background:"#f0fdf4",borderRadius:"8px",padding:"8px 10px",marginBottom:"10px"}}>
-                    <p style={{fontSize:"10px",fontWeight:700,color:"#166534",margin:"0 0 3px",textTransform:"uppercase",letterSpacing:"0.05em"}}>Nutrition</p>
-                    <p style={{fontSize:"11px",color:"#374151",margin:0,lineHeight:1.5}}>{m.nutritionNotes}</p>
+                  <div style={{background:C.accentSoft,borderRadius:"8px",padding:"10px 12px",marginBottom:"14px",borderLeft:`3px solid ${C.accent}`}}>
+                    <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0,lineHeight:1.6,fontStyle:"italic"}}>{m.nutritionNotes}</p>
                   </div>
-                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"12px"}}>
+                  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",gap:"16px"}}>
                     <div>
-                      <p style={{fontSize:"10px",fontWeight:700,color:"#475569",textTransform:"uppercase",letterSpacing:"0.05em",margin:"0 0 6px"}}>Ingredients</p>
+                      <p style={{fontSize:"10px",fontWeight:600,color:C.textSoft,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.8px",margin:"0 0 8px"}}>Ingredients</p>
                       {m.recipe.ingredients.map((ing,j)=>(
-                        <div key={j} style={{display:"flex",gap:"6px",marginBottom:"4px"}}>
-                          <span style={{color:"#16a34a",fontWeight:800,flexShrink:0,fontSize:"12px"}}>•</span>
-                          <span style={{fontSize:"11px",color:"#374151"}}>{ing}</span>
+                        <div key={j} style={{display:"flex",gap:"8px",marginBottom:"5px",alignItems:"flex-start"}}>
+                          <span style={{color:C.accentMid,fontWeight:700,flexShrink:0,fontSize:"14px",lineHeight:1.3}}>·</span>
+                          <span style={{fontSize:"12px",color:C.text,fontFamily:SS,lineHeight:1.5}}>{ing}</span>
                         </div>
                       ))}
                     </div>
                     <div>
-                      <p style={{fontSize:"10px",fontWeight:700,color:"#475569",textTransform:"uppercase",letterSpacing:"0.05em",margin:"0 0 6px"}}>Steps</p>
+                      <p style={{fontSize:"10px",fontWeight:600,color:C.textSoft,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.8px",margin:"0 0 8px"}}>Method</p>
                       {m.recipe.steps.map((step,j)=>{
                         const isBaby=step.startsWith("BABY");
                         const isAdult=step.startsWith("ADULT");
                         return (
-                          <div key={j} style={{display:"flex",gap:"6px",marginBottom:"7px",alignItems:"flex-start"}}>
-                            <span style={{background:isBaby?"#fef9c3":isAdult?"#dbeafe":"#dcfce7",color:isBaby?"#92400e":isAdult?"#1d4ed8":"#166534",borderRadius:"50%",width:"18px",height:"18px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"9px",fontWeight:700,flexShrink:0,marginTop:"1px"}}>{j+1}</span>
-                            <span style={{fontSize:"11px",color:isBaby?"#92400e":isAdult?"#1d4ed8":"#374151",lineHeight:1.6,fontWeight:isBaby||isAdult?600:400}}>{step}</span>
+                          <div key={j} style={{display:"flex",gap:"8px",marginBottom:"8px",alignItems:"flex-start"}}>
+                            <span style={{background:isBaby?C.cream:isAdult?C.accentSoft:C.accentSoft,color:isBaby?C.babyText:C.accent,borderRadius:"50%",width:"18px",height:"18px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"9px",fontWeight:700,flexShrink:0,marginTop:"1px",fontFamily:SS,border:`1px solid ${isBaby?C.creamBorder:C.accentMid}`}}>{j+1}</span>
+                            <span style={{fontSize:"11px",color:isBaby?C.babyText:isAdult?C.accent:C.text,lineHeight:1.6,fontWeight:isBaby||isAdult?600:400,fontFamily:SS}}>{step}</span>
                           </div>
                         );
                       })}
@@ -545,151 +588,147 @@ export default function App() {
             </div>
           )}
 
-          {/* PREP TAB */}
+          {/* PREP */}
           {section==="prep" && (
             <div>
-              <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"10px 14px",marginBottom:"14px"}}>
-                <p style={{fontSize:"12px",fontWeight:700,color:"#92400e",margin:0}}>📦 Complete all steps on Monday in this order</p>
-                <p style={{fontSize:"11px",color:"#78350f",margin:"3px 0 0"}}>Steps are sequenced so earlier steps feed into later ones. Label every bag with the day and meal.</p>
+              <div style={{background:C.cream,border:`1px solid ${C.creamBorder}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"16px"}}>
+                <p style={{fontSize:"12px",fontWeight:600,color:C.babyText,fontFamily:SS,margin:0}}>Complete all steps on Monday in this order</p>
+                <p style={{fontSize:"11px",color:C.babyText,fontFamily:SS,margin:"3px 0 0",opacity:0.8}}>Label every bag with the day and meal name.</p>
               </div>
               {week.prepChecklist.map((item,i)=>(
-                <div key={i} style={{display:"flex",gap:"10px",marginBottom:"10px",alignItems:"flex-start",background:"#f8fafc",borderRadius:"10px",padding:"10px 12px",border:"1px solid #e2e8f0"}}>
-                  <span style={{background:"#166534",color:"white",borderRadius:"50%",width:"22px",height:"22px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:700,flexShrink:0}}>{item.step}</span>
+                <div key={i} style={{display:"flex",gap:"12px",marginBottom:"10px",alignItems:"flex-start",background:C.bg,borderRadius:"12px",padding:"12px 14px",border:`1px solid ${C.border}`}}>
+                  <span style={{background:C.accent,color:"#f0ebe0",borderRadius:"50%",width:"24px",height:"24px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:600,flexShrink:0,fontFamily:SS}}>{item.step}</span>
                   <div>
-                    <p style={{fontSize:"12px",fontWeight:700,color:"#1e293b",margin:"0 0 2px"}}>{item.title}</p>
-                    <p style={{fontSize:"11px",color:"#6b7280",margin:0,lineHeight:1.6}}>{item.detail}</p>
+                    <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.text,margin:"0 0 3px"}}>{item.title}</p>
+                    <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0,lineHeight:1.6}}>{item.detail}</p>
                   </div>
                 </div>
               ))}
             </div>
           )}
 
-          {/* TEXTURES TAB */}
+          {/* TEXTURES */}
           {section==="textures" && (
             <div>
-              <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"10px 12px",marginBottom:"12px"}}>
-                <p style={{fontSize:"12px",fontWeight:700,color:"#92400e",margin:0}}>👶 Always supervise mealtimes · Never leave baby alone while eating</p>
+              <div style={{background:C.cream,border:`1px solid ${C.creamBorder}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"14px"}}>
+                <p style={{fontSize:"12px",fontWeight:600,color:C.babyText,fontFamily:SS,margin:0}}>Always supervise mealtimes · Never leave baby alone while eating</p>
               </div>
               {week.textures.map((item,i)=>(
-                <div key={i} style={{display:"flex",gap:"8px",marginBottom:"10px",alignItems:"flex-start",padding:"8px 0",borderBottom:"1px solid #f1f5f9"}}>
-                  <span style={{flexShrink:0,fontSize:"14px"}}>👶</span>
-                  <span style={{fontSize:"12px",color:"#374151",lineHeight:1.6}}>{item}</span>
+                <div key={i} style={{display:"flex",gap:"10px",marginBottom:"10px",alignItems:"flex-start",padding:"10px 0",borderBottom:`1px solid ${C.border}`}}>
+                  <span style={{color:C.accentMid,flexShrink:0,fontSize:"18px",lineHeight:1}}>·</span>
+                  <span style={{fontSize:"12px",color:C.text,fontFamily:SS,lineHeight:1.7}}>{item}</span>
                 </div>
               ))}
             </div>
           )}
 
-          {/* ALLERGENS TAB */}
+          {/* ALLERGENS */}
           {section==="allergens" && (
             <div>
-              <p style={{fontSize:"12px",color:"#6b7280",margin:"0 0 12px"}}>Target: cover at least 6 of 8 allergen groups every week.</p>
-              <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginBottom:"14px"}}>
+              <p style={{fontSize:"12px",color:C.textMid,fontFamily:SS,margin:"0 0 14px"}}>Target: cover at least 6 of 8 allergen groups every week.</p>
+              <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginBottom:"16px"}}>
                 {ALLERGENS.map(a=>{
                   const hit=week.allergenCoverage.hit.includes(a);
-                  const c=COLORS[a];
+                  const c=ALLERGEN_COLORS[a]||"#666";
                   return (
-                    <div key={a} style={{display:"flex",alignItems:"center",gap:"8px",background:hit?c+"11":"#f8fafc",border:`1px solid ${hit?c+"44":"#e2e8f0"}`,borderRadius:"10px",padding:"8px 12px",minWidth:"120px"}}>
-                      <span style={{fontSize:"14px"}}>{hit?"✅":"⬜"}</span>
+                    <div key={a} style={{display:"flex",alignItems:"center",gap:"8px",background:hit?c+"10":C.bg,border:`1px solid ${hit?c+"35":C.border}`,borderRadius:"10px",padding:"8px 14px",minWidth:"110px"}}>
+                      <span style={{width:"8px",height:"8px",borderRadius:"50%",background:hit?c:"#ccc",flexShrink:0,display:"inline-block"}}/>
                       <div>
-                        <div style={{fontSize:"11px",fontWeight:700,color:hit?c:"#9ca3af"}}>{a}</div>
-                        <div style={{fontSize:"10px",color:hit?"#166534":"#9ca3af"}}>{hit?"Covered":"Skipped"}</div>
+                        <div style={{fontSize:"12px",fontFamily:SS,fontWeight:600,color:hit?c:C.textSoft}}>{a}</div>
+                        <div style={{fontSize:"10px",fontFamily:SS,color:hit?c:C.textSoft,opacity:0.8}}>{hit?"Covered":"Skipped"}</div>
                       </div>
                     </div>
                   );
                 })}
               </div>
-              <div style={{background:"#f0fdf4",borderRadius:"10px",padding:"10px 14px",border:"1px solid #bbf7d0"}}>
-                <span style={{fontSize:"12px",fontWeight:700,color:"#166534"}}>{week.allergenCoverage.hit.length}/8 allergen groups covered this week ✅</span>
+              <div style={{background:C.accentSoft,borderRadius:"10px",padding:"10px 14px",border:`1px solid ${C.accentMid}`}}>
+                <span style={{fontSize:"12px",fontWeight:600,color:C.accent,fontFamily:SS}}>{week.allergenCoverage.hit.length}/8 allergen groups covered this week</span>
               </div>
             </div>
           )}
 
-
-          {/* SNACKS TAB */}
+          {/* SNACKS */}
           {section==="snacks" && (
             <div>
-              <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"10px 14px",marginBottom:"16px"}}>
-                <p style={{fontSize:"12px",fontWeight:700,color:"#92400e",margin:0}}>🍌 Baby Snack Bank — 9 months+</p>
-                <p style={{fontSize:"11px",color:"#78350f",margin:"3px 0 0"}}>Core snacks are available every week. Weekly extras rotate to keep allergen exposure varied and textures progressing.</p>
+              <div style={{background:C.cream,border:`1px solid ${C.creamBorder}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"18px"}}>
+                <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.babyText,margin:"0 0 2px"}}>Baby Snack Bank</p>
+                <p style={{fontSize:"11px",color:C.babyText,fontFamily:SS,margin:0,opacity:0.85}}>Core snacks every week, plus rotating extras to keep allergen exposure varied.</p>
               </div>
-
-              <p style={{fontSize:"12px",fontWeight:700,color:"#14532d",margin:"0 0 10px",textTransform:"uppercase",letterSpacing:"0.05em"}}>Core Snacks — Every Week</p>
-              <div style={{display:"grid",gridTemplateColumns:"1fr",gap:"8px",marginBottom:"20px"}}>
+              <p style={{fontSize:"10px",fontWeight:600,color:C.textSoft,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.8px",margin:"0 0 10px"}}>Every week</p>
+              <div style={{display:"grid",gridTemplateColumns:"1fr",gap:"8px",marginBottom:"22px"}}>
                 {CORE_SNACKS.map((s,i)=>(
-                  <div key={i} style={{background:"#f8fafc",borderRadius:"10px",padding:"10px 14px",border:"1px solid #e2e8f0"}}>
+                  <div key={i} style={{background:C.bg,borderRadius:"10px",padding:"11px 14px",border:`1px solid ${C.border}`}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"8px",flexWrap:"wrap",marginBottom:"4px"}}>
-                      <p style={{fontSize:"13px",fontWeight:700,color:"#1e293b",margin:0}}>{s.name}</p>
+                      <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.text,margin:0}}>{s.name}</p>
                       <div>{s.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
                     </div>
-                    <p style={{fontSize:"11px",color:"#6b7280",margin:0,lineHeight:1.5}}>{s.notes}</p>
+                    <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0,lineHeight:1.5}}>{s.notes}</p>
                   </div>
                 ))}
               </div>
-
-              <p style={{fontSize:"12px",fontWeight:700,color:"#14532d",margin:"0 0 10px",textTransform:"uppercase",letterSpacing:"0.05em"}}>This Week's Extras — {week.title}</p>
+              <p style={{fontSize:"10px",fontWeight:600,color:C.textSoft,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.8px",margin:"0 0 10px"}}>This week's extras — {week.title}</p>
               <div style={{display:"grid",gridTemplateColumns:"1fr",gap:"8px"}}>
                 {WEEKLY_SNACKS.find(w=>w.week===tab+1)?.extras.map((s,i)=>(
-                  <div key={i} style={{background:"#f0fdf4",borderRadius:"10px",padding:"10px 14px",border:"1px solid #bbf7d0"}}>
+                  <div key={i} style={{background:C.accentSoft,borderRadius:"10px",padding:"11px 14px",border:`1px solid ${C.accentMid}`}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"8px",flexWrap:"wrap",marginBottom:"4px"}}>
-                      <p style={{fontSize:"13px",fontWeight:700,color:"#14532d",margin:0}}>{s.name}</p>
+                      <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.accent,margin:0}}>{s.name}</p>
                       <div>{s.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
                     </div>
-                    <p style={{fontSize:"11px",color:"#374151",margin:0,lineHeight:1.5}}>{s.notes}</p>
+                    <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0,lineHeight:1.5}}>{s.notes}</p>
                   </div>
                 ))}
               </div>
             </div>
           )}
 
-
-          {/* GROCERY TAB */}
+          {/* GROCERY */}
           {section==="grocery" && (
             <div>
-              <div style={{background:"#f0f9ff",border:"1px solid #bae6fd",borderRadius:"10px",padding:"10px 14px",marginBottom:"16px"}}>
-                <p style={{fontSize:"12px",fontWeight:700,color:"#0369a1",margin:0}}>🛒 {week.title} Grocery List</p>
-                <p style={{fontSize:"11px",color:"#0c4a6e",margin:"3px 0 0"}}>Everything you need for this week's 3 dinners + leftovers. Check your pantry for staples before shopping.</p>
+              <div style={{background:C.accentSoft,border:`1px solid ${C.accentMid}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"18px"}}>
+                <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.accent,margin:"0 0 2px"}}>{week.title} Shopping List</p>
+                <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0}}>Everything for this week's 3 dinners. Check your pantry for staples first.</p>
               </div>
               {GROCERY_LISTS.find(g=>g.week===tab+1)?.categories.map((cat,i)=>(
-                <div key={i} style={{marginBottom:"14px"}}>
-                  <p style={{fontSize:"12px",fontWeight:700,color:"#1e293b",margin:"0 0 6px"}}>{cat.name}</p>
-                  <div style={{background:"#f8fafc",borderRadius:"10px",padding:"10px 14px",border:"1px solid #e2e8f0"}}>
+                <div key={i} style={{marginBottom:"16px"}}>
+                  <p style={{fontSize:"11px",fontWeight:600,color:C.textMid,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.6px",margin:"0 0 6px"}}>{cat.name}</p>
+                  <div style={{background:C.bg,borderRadius:"10px",padding:"10px 14px",border:`1px solid ${C.border}`}}>
                     {cat.items.map((item,j)=>(
-                      <div key={j} style={{display:"flex",alignItems:"center",gap:"10px",padding:"5px 0",borderBottom:j<cat.items.length-1?"1px solid #f1f5f9":"none"}}>
-                        <span style={{width:"16px",height:"16px",border:"2px solid #d1d5db",borderRadius:"3px",flexShrink:0,display:"inline-block"}}/>
-                        <span style={{fontSize:"12px",color:"#374151"}}>{item}</span>
+                      <div key={j} style={{display:"flex",alignItems:"center",gap:"10px",padding:"6px 0",borderBottom:j<cat.items.length-1?`1px solid ${C.border}`:"none"}}>
+                        <span style={{width:"15px",height:"15px",border:`1.5px solid ${C.accentMid}`,borderRadius:"3px",flexShrink:0,display:"inline-block"}}/>
+                        <span style={{fontSize:"12px",color:C.text,fontFamily:SS}}>{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
-              <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"10px 14px",marginTop:"6px"}}>
-                <p style={{fontSize:"11px",color:"#78350f",margin:0}}>💡 <strong>Pantry staples to always keep stocked:</strong> olive oil, low-sodium soy sauce, sesame oil, garlic powder, cumin, ground sesame seeds, full-fat plain yoghurt, eggs, butter.</p>
+              <div style={{background:C.cream,border:`1px solid ${C.creamBorder}`,borderRadius:"10px",padding:"10px 14px",marginTop:"4px"}}>
+                <p style={{fontSize:"11px",color:C.babyText,fontFamily:SS,margin:0,lineHeight:1.6}}><strong>Pantry staples to keep stocked:</strong> olive oil, low-sodium soy sauce, sesame oil, garlic powder, ground sesame seeds, full-fat plain yoghurt, eggs, butter.</p>
               </div>
             </div>
           )}
 
-          {/* GLOSSARY TAB */}
+          {/* GLOSSARY */}
           {section==="glossary" && (
             <div>
-              <p style={{fontSize:"12px",color:"#6b7280",margin:"0 0 14px"}}>All 18 meals across 6 weeks. Tap any meal to jump to its full recipe.</p>
+              <p style={{fontSize:"12px",color:C.textMid,fontFamily:SS,margin:"0 0 16px"}}>All 18 meals across 6 weeks. Tap any meal to jump to its full recipe.</p>
               {WEEKS.map((w,wi)=>(
-                <div key={wi} style={{marginBottom:"18px"}}>
-                  <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"8px"}}>
-                    <span style={{background:"#166534",color:"white",borderRadius:"6px",padding:"3px 10px",fontSize:"11px",fontWeight:700}}>{w.title}</span>
-                    <span style={{fontSize:"11px",color:"#6b7280",fontStyle:"italic"}}>{w.nutritionFocus}</span>
+                <div key={wi} style={{marginBottom:"20px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"8px"}}>
+                    <span style={{background:C.accent,color:"#f0ebe0",borderRadius:"6px",padding:"3px 10px",fontSize:"11px",fontFamily:SS,fontWeight:600}}>{w.title}</span>
+                    <span style={{fontSize:"11px",color:C.textSoft,fontFamily:SF,fontStyle:"italic"}}>{w.nutritionFocus}</span>
                   </div>
                   {w.meals.map((m,mi)=>(
-                    <button key={mi} onClick={()=>goToRecipe(wi,mi)} style={{display:"flex",alignItems:"flex-start",gap:"10px",width:"100%",marginBottom:"6px",background:"#f8fafc",border:"1px solid #e2e8f0",borderRadius:"10px",padding:"10px 12px",cursor:"pointer",textAlign:"left",transition:"all 0.15s"}}
-                      onMouseEnter={e=>{e.currentTarget.style.background="#f0fdf4";e.currentTarget.style.borderColor="#166534";}}
-                      onMouseLeave={e=>{e.currentTarget.style.background="#f8fafc";e.currentTarget.style.borderColor="#e2e8f0";}}>
+                    <button key={mi} onClick={()=>goToRecipe(wi,mi)} style={{display:"flex",alignItems:"flex-start",gap:"10px",width:"100%",marginBottom:"6px",background:C.bg,border:`1px solid ${C.border}`,borderRadius:"12px",padding:"11px 14px",cursor:"pointer",textAlign:"left",transition:"all 0.15s"}}
+                      onMouseEnter={e=>{e.currentTarget.style.background=C.accentSoft;e.currentTarget.style.borderColor=C.accentMid;}}
+                      onMouseLeave={e=>{e.currentTarget.style.background=C.bg;e.currentTarget.style.borderColor=C.border;}}>
                       <div style={{flexShrink:0,marginTop:"2px"}}>
-                        <span style={{fontSize:"10px",fontWeight:700,color:"#166534",background:"#dcfce7",borderRadius:"4px",padding:"1px 6px"}}>{m.day}</span>
+                        <span style={{fontSize:"10px",fontWeight:600,color:C.accent,background:C.accentSoft,borderRadius:"4px",padding:"2px 7px",fontFamily:SS,letterSpacing:"0.3px",textTransform:"uppercase"}}>{m.day}</span>
                       </div>
                       <div style={{flex:1}}>
-                        <p style={{fontSize:"12px",fontWeight:700,color:"#1e293b",margin:"0 0 4px"}}>{m.meal}</p>
+                        <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.text,margin:"0 0 4px",lineHeight:1.3}}>{m.meal}</p>
                         <div>{m.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
                       </div>
-                      <span style={{color:"#16a34a",fontSize:"16px",flexShrink:0,marginTop:"2px"}}>→</span>
+                      <span style={{color:C.accentMid,fontSize:"18px",flexShrink:0,marginTop:"2px"}}>→</span>
                     </button>
                   ))}
                 </div>
