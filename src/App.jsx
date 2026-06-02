@@ -459,7 +459,15 @@ export default function App() {
   const [tab, setTab] = useState(0);
   const [section, setSection] = useState("meals");
   const [glossaryTarget, setGlossaryTarget] = useState(null);
+  const [checked, setChecked] = useState({});
   const week = WEEKS[tab];
+
+  const toggleItem = (key) => setChecked(prev => ({...prev, [key]: !prev[key]}));
+  const clearChecked = (weekNum) => setChecked(prev => {
+    const next = {...prev};
+    Object.keys(next).filter(k=>k.startsWith(`w${weekNum}-`)).forEach(k=>delete next[k]);
+    return next;
+  });
 
   const goToRecipe = (weekIndex, mealIndex) => {
     setTab(weekIndex);
@@ -684,20 +692,29 @@ export default function App() {
           {/* GROCERY */}
           {section==="grocery" && (
             <div>
-              <div style={{background:C.accentSoft,border:`1px solid ${C.accentMid}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"18px"}}>
-                <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.accent,margin:"0 0 2px"}}>{week.title} Shopping List</p>
-                <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0}}>Everything for this week's 3 dinners. Check your pantry for staples first.</p>
+              <div style={{background:C.accentSoft,border:`1px solid ${C.accentMid}`,borderRadius:"10px",padding:"10px 14px",marginBottom:"18px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div>
+                  <p style={{fontSize:"13px",fontFamily:SF,fontWeight:"normal",color:C.accent,margin:"0 0 2px"}}>{week.title} Shopping List</p>
+                  <p style={{fontSize:"11px",color:C.textMid,fontFamily:SS,margin:0}}>Tap items to check them off as you shop.</p>
+                </div>
+                <button onClick={()=>clearChecked(tab+1)} style={{background:"none",border:`1px solid ${C.accentMid}`,borderRadius:"6px",padding:"4px 10px",fontSize:"11px",color:C.accent,fontFamily:SS,cursor:"pointer"}}>Clear</button>
               </div>
               {GROCERY_LISTS.find(g=>g.week===tab+1)?.categories.map((cat,i)=>(
                 <div key={i} style={{marginBottom:"16px"}}>
                   <p style={{fontSize:"11px",fontWeight:600,color:C.textMid,fontFamily:SS,textTransform:"uppercase",letterSpacing:"0.6px",margin:"0 0 6px"}}>{cat.name}</p>
                   <div style={{background:C.bg,borderRadius:"10px",padding:"10px 14px",border:`1px solid ${C.border}`}}>
-                    {cat.items.map((item,j)=>(
-                      <div key={j} style={{display:"flex",alignItems:"center",gap:"10px",padding:"6px 0",borderBottom:j<cat.items.length-1?`1px solid ${C.border}`:"none"}}>
-                        <span style={{width:"15px",height:"15px",border:`1.5px solid ${C.accentMid}`,borderRadius:"3px",flexShrink:0,display:"inline-block"}}/>
-                        <span style={{fontSize:"12px",color:C.text,fontFamily:SS}}>{item}</span>
-                      </div>
-                    ))}
+                    {cat.items.map((item,j)=>{
+                      const key = `w${tab+1}-${i}-${j}`;
+                      const isChecked = !!checked[key];
+                      return (
+                        <div key={j} onClick={()=>toggleItem(key)} style={{display:"flex",alignItems:"center",gap:"10px",padding:"8px 0",borderBottom:j<cat.items.length-1?`1px solid ${C.border}`:"none",cursor:"pointer",userSelect:"none"}}>
+                          <span style={{width:"18px",height:"18px",border:`1.5px solid ${isChecked?C.accent:C.accentMid}`,borderRadius:"4px",flexShrink:0,display:"flex",alignItems:"center",justifyContent:"center",background:isChecked?C.accent:"white",transition:"all 0.15s"}}>
+                            {isChecked && <svg width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+                          </span>
+                          <span style={{fontSize:"12px",color:isChecked?C.textSoft:C.text,fontFamily:SS,textDecoration:isChecked?"line-through":"none",transition:"all 0.15s"}}>{item}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
