@@ -406,32 +406,32 @@ const GROCERY_LISTS = [
 
 // ── Colour tokens ──────────────────────────────────────────────
 const C = {
-  bg:        "#f5f2eb",
+  bg:        "#f0fdf4",
   card:      "#ffffff",
-  header:    "#2d4a33",
-  headerSub: "#9abf9c",
-  accent:    "#2d4a33",
-  accentSoft:"#e4ede5",
-  accentMid: "#6a9e6c",
+  header:    "#14532d",
+  headerSub: "#bbf7d0",
+  accent:    "#166534",
+  accentSoft:"#dcfce7",
+  accentMid: "#86efac",
   cream:     "#fdf8ef",
-  creamBorder:"#c8b080",
-  text:      "#111111",
-  textMid:   "#2a2a2a",
-  textSoft:  "#4a4a4a",
-  border:    "#c8c0b4",
+  creamBorder:"#fde68a",
+  text:      "#1e293b",
+  textMid:   "#374151",
+  textSoft:  "#6b7280",
+  border:    "#e2e8f0",
   baby:      "#fdf3e3",
-  babyBorder:"#c0a060",
-  babyText:  "#4a3008",
+  babyBorder:"#fde68a",
+  babyText:  "#78350f",
 };
 
-const NUTR_COLORS = {"Iron":"#a84040","Zinc":"#6b52b0","Omega-3":"#3a6fa8","Vitamin C":"#b07820","Protein":"#3a6840","Healthy Fats":"#2a8070","Calcium":"#5050a0","Fibre":"#7a5030"};
+const NUTR_COLORS = {"Iron":"#dc2626","Zinc":"#7c3aed","Omega-3":"#0ea5e9","Vitamin C":"#f59e0b","Protein":"#16a34a","Healthy Fats":"#0d9488","Calcium":"#6366f1","Fibre":"#92400e"};
 
 function NutrBadge({label}) {
   const c = NUTR_COLORS[label]||"#666";
   return <span style={{background:c+"14",color:c,border:`1px solid ${c}30`,borderRadius:"4px",padding:"2px 7px",fontSize:"10px",fontWeight:600,display:"inline-block",margin:"2px",fontFamily:"system-ui,sans-serif",letterSpacing:"0.2px"}}>{label}</span>;
 }
 
-const ALLERGEN_COLORS = {"Egg":"#b07820","Peanut":"#7a4a20","Fish":"#2a6090","Wheat":"#8a6020","Tree Nuts":"#3a6830","Soy":"#5a3a90","Sesame":"#902020","Dairy":"#404090"};
+const ALLERGEN_COLORS = {"Egg":"#f59e0b","Peanut":"#92400e","Fish":"#0ea5e9","Wheat":"#d97706","Tree Nuts":"#16a34a","Soy":"#7c3aed","Sesame":"#dc2626","Dairy":"#6366f1"};
 
 function AllergenBadge({label}) {
   const c = ALLERGEN_COLORS[label]||"#666";
