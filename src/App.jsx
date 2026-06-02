@@ -406,22 +406,22 @@ const GROCERY_LISTS = [
 
 // ── Colour tokens ──────────────────────────────────────────────
 const C = {
-  bg:        "#faf8f3",
+  bg:        "#f5f2eb",
   card:      "#ffffff",
-  header:    "#3a5240",
-  headerSub: "#8aab8e",
-  accent:    "#3a5240",
-  accentSoft:"#edf3ee",
-  accentMid: "#c8d9c9",
+  header:    "#2d4a33",
+  headerSub: "#9abf9c",
+  accent:    "#2d4a33",
+  accentSoft:"#e4ede5",
+  accentMid: "#6a9e6c",
   cream:     "#fdf8ef",
-  creamBorder:"#e8dfc8",
-  text:      "#2c2c2c",
-  textMid:   "#5a5a5a",
-  textSoft:  "#8a8a8a",
-  border:    "#e4ddd2",
+  creamBorder:"#c8b080",
+  text:      "#111111",
+  textMid:   "#2a2a2a",
+  textSoft:  "#4a4a4a",
+  border:    "#c8c0b4",
   baby:      "#fdf3e3",
-  babyBorder:"#e8d5b0",
-  babyText:  "#7a5c2e",
+  babyBorder:"#c0a060",
+  babyText:  "#4a3008",
 };
 
 const NUTR_COLORS = {"Iron":"#a84040","Zinc":"#6b52b0","Omega-3":"#3a6fa8","Vitamin C":"#b07820","Protein":"#3a6840","Healthy Fats":"#2a8070","Calcium":"#5050a0","Fibre":"#7a5030"};
