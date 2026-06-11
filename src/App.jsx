@@ -75,9 +75,9 @@ const WEEKS = [
         nutritionNotes:"Trout = excellent omega-3 DHA, widely available and mild in flavour. Quinoa = complete protein + iron + zinc. Butternut squash = vitamin C + beta-carotene. Tahini drizzle = calcium + healthy fats.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["4 trout fillets","1 large butternut squash, peeled and cubed 2cm","400g quinoa","800ml low-sodium veg stock","1 tsp dried thyme","4 tbsp tahini","Juice of 1 lemon (adults only)","2 tbsp olive oil"],
-          steps:["Preheat oven to 200°C. Toss squash in olive oil. Roast 15 mins.","Cook quinoa in stock 15 mins until absorbed. Fluff with fork.","Push squash to sides. Lay trout fillets on tray. Bake further 12–15 mins.","Thin tahini with 2 tbsp water into a drizzle.","BABY: Flake trout very carefully — it has fine bones, check thoroughly. Mash squash smooth. Mix with quinoa and a drizzle of tahini. Squash provides vitamin C to boost quinoa iron.","ADULTS: Serve over quinoa. Mix tahini with lemon juice and drizzle over."]
+          serves:"2 adults + baby — serves 2 nights", temp:"220°C / 425°F", time:"50 min",
+          ingredients:["4 trout fillets","1 large butternut squash","400g quinoa","800ml low-sodium veg stock","1 tsp dried thyme","4 tbsp tahini","Juice of 1 lemon (adults only)","2 tbsp olive oil"],
+          steps:["Prick the whole squash a few times with a knife and microwave 3–4 mins to soften — this makes it far easier to peel and cut, and speeds roasting. Peel, deseed and cut into 1.5–2cm cubes.","Preheat oven to 220°C. Toss squash in olive oil and thyme. Roast 30–35 mins, turning once, until fork-tender and caramelised at the edges.","Meanwhile cook quinoa in stock 15 mins until absorbed. Fluff with a fork.","Push squash to the sides of the tray. Lay trout fillets in the centre. Bake a further 12–15 mins until trout flakes easily.","Thin tahini with 2 tbsp water into a drizzle.","BABY: Flake trout very carefully — it has fine bones, check thoroughly. Mash squash smooth. Mix with quinoa and a drizzle of tahini. Squash provides vitamin C to boost quinoa iron.","ADULTS: Serve over quinoa. Mix tahini with lemon juice and drizzle over."]
         }
       },
       {
@@ -86,9 +86,9 @@ const WEEKS = [
         nutritionNotes:"Chickpeas = iron + zinc + fibre. Chicken = zinc + protein. Tomatoes = high vitamin C, dramatically boosts chickpea iron absorption. Feta = calcium.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"35 min",
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"45 min",
           ingredients:["4 chicken thighs, bone-in skin-on","2 tins (400g) chickpeas, drained","600g cherry tomatoes","2 tbsp olive oil","1 tsp mild curry powder","½ tsp garlic powder","160g feta, crumbled","2 eggs, hard boiled"],
-          steps:["Preheat oven to 200°C. Mix chickpeas, tomatoes, olive oil, cumin and garlic in a baking dish.","Nestle chicken on top skin-side up. Bake 35 mins.","BABY: Squash each chickpea flat between fingers — removes skin and choking risk. Shred chicken finely removing skin. Spoon plenty of tomato juice over for vitamin C. Crumble feta on top. Grate hard boiled egg over for extra iron.","ADULTS: Serve from dish with feta crumbled on top."]
+          steps:["Preheat oven to 200°C. Mix chickpeas, tomatoes, olive oil, curry powder and garlic in a baking dish.","Nestle chicken on top skin-side up. Bake 40–45 mins until the thighs reach 75°C / 165°F at the bone and the skin is golden.","BABY: Squash each chickpea flat between fingers — removes skin and choking risk. Shred chicken finely removing skin. Spoon plenty of tomato juice over for vitamin C. Crumble feta on top. Grate hard boiled egg over for extra iron.","ADULTS: Serve from dish with feta crumbled on top."]
         }
       },
       {
@@ -97,9 +97,9 @@ const WEEKS = [
         nutritionNotes:"Chicken = zinc + protein. Walnut + cashew crust = zinc + healthy fats + iron. Broccoli = vitamin C + iron + calcium. Egg wash binds crust. Brown rice = zinc + fibre.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"25 min",
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
           ingredients:["4 chicken breasts","100g walnuts, finely ground","100g cashews, finely ground","2 eggs, beaten (for coating)","2 tbsp sesame oil","2 tbsp low-sodium soy sauce","1 tsp dried rosemary, finely chopped","400g broccoli florets","600g brown rice, cooked","2 tbsp olive oil"],
-          steps:["Preheat oven to 200°C. Mix ground nuts with soy sauce and sesame oil into a paste.","Dip chicken breasts in beaten egg then press nut crust firmly on top.","Place on a lined tray with broccoli tossed in olive oil around the chicken.","Bake 28–30 mins until chicken is cooked through and crust is golden.","BABY: Reserve a small piece of uncrusted chicken — bake plain alongside. Shred very finely. For the crust, ensure nuts are ground to fine powder — mix a small amount into baby's rice as a topping. Cut broccoli into tiny soft pieces. Vitamin C in broccoli boosts iron from chicken and rice.","ADULTS: Slice chicken and serve over brown rice with broccoli."]
+          steps:["Preheat oven to 200°C. Mix ground nuts with soy sauce and sesame oil into a paste.","Dip chicken breasts in beaten egg then press nut crust firmly on top.","Place on a lined tray with broccoli tossed in olive oil around the chicken.","Bake 28–30 mins until chicken is cooked through (75°C / 165°F) and crust is golden. If the crust browns too fast, tent loosely with foil for the last 10 mins.","BABY: Reserve a small piece of uncrusted chicken — bake plain alongside. Shred very finely. For the crust, ensure nuts are ground to fine powder — mix a small amount into baby's rice as a topping. Cut broccoli into tiny soft pieces. Vitamin C in broccoli boosts iron from chicken and rice.","ADULTS: Slice chicken and serve over brown rice with broccoli."]
         }
       }
     ],
@@ -127,18 +127,18 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"45 min",
           ingredients:["800g lamb mince","2 tins (400g) green lentils, drained","4 courgettes, sliced into half moons","2 tins (400g) chopped tomatoes","1 tsp dried rosemary, finely chopped","1 tsp dried thyme","½ tsp garlic powder","300g full-fat plain yoghurt","Pitta bread (adults)"],
-          steps:["Preheat oven to 190°C. Brown lamb in oven-proof pan 3 mins. Drain excess fat.","Add lentils, tomatoes, cumin and garlic. Stir. Arrange courgette on top.","Transfer to oven. Bake uncovered 40 mins.","BABY: Scoop lamb and lentil mixture, mash lightly. No large chunks. Add a spoonful of plain yoghurt for calcium. Courgette provides vitamin C to boost iron from lamb and lentils.","ADULTS: Serve with pitta and mint yoghurt."]
+          steps:["Preheat oven to 190°C. Brown lamb in oven-proof pan 3 mins. Drain excess fat.","Add lentils, tomatoes, rosemary, thyme and garlic. Stir. Arrange courgette on top.","Transfer to oven. Bake uncovered 40 mins.","BABY: Scoop lamb and lentil mixture, mash lightly. No large chunks. Add a spoonful of plain yoghurt for calcium. Courgette provides vitamin C to boost iron from lamb and lentils.","ADULTS: Serve with pitta and mint yoghurt."]
         }
       },
       {
-        day:"Thursday", meal:"Baked Tuna & Egg Frittata with Roasted Cherry Tomatoes",
-        allergens:["Fish","Egg","Dairy","Sesame"], nutrition:["Iron","Omega-3","Calcium","Vitamin C","Zinc","Protein"],
-        nutritionNotes:"Tinned tuna = lean protein + omega-3 + iron, widely available and affordable. Eggs = iron + zinc. Cherry tomatoes = vitamin C to boost all iron. Cheddar adds calcium.",
+        day:"Thursday", meal:"Japanese Beef & Shiitake Mushroom Bake with Brown Rice",
+        allergens:["Soy","Wheat","Sesame","Tree Nuts"], nutrition:["Iron","Zinc","Vitamin C","Protein","Fibre"],
+        nutritionNotes:"Beef = haem iron + zinc. Shiitake mushrooms add umami depth and B vitamins. Spinach = plant iron. Tomato = vitamin C to boost all iron sources. Ground sesame and cashew add calcium, zinc and healthy fats.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"180°C / 355°F", time:"25 min",
-          ingredients:["4 tins (320g total) tuna in spring water, drained","10 eggs","200ml whole milk","200g cherry tomatoes, halved","100g cheddar, grated","1 tbsp sesame seeds, ground","2 tbsp olive oil"],
-          steps:["Preheat oven to 180°C. Whisk eggs with milk.","Heat olive oil in oven-proof frying pan. Add drained tuna and break up gently. Pour egg mixture over.","Top with cherry tomatoes, grated cheddar and ground sesame seeds.","Bake 20–22 mins until set in the centre.","BABY: Cut a slice and break into soft flakes — tuna and egg make this very easy to gum. Cherry tomatoes provide vitamin C. Serve warm or at room temp.","ADULTS: Slice and serve with salad."]
+          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
+          ingredients:["800g lean beef mince","200g shiitake mushrooms, finely sliced","200g baby spinach, chopped","2 tins (400g) chopped tomatoes","2 tbsp low-sodium soy sauce","1 tbsp mirin","1 tsp ginger powder","½ tsp garlic powder","600g brown rice, cooked","1 tbsp sesame seeds, ground","2 tbsp cashews, finely ground (for baby topping)"],
+          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on the hob, drain excess fat.","Mix in shiitake, spinach, tomatoes, ginger and garlic. Reserve baby's portion now, before the soy sauce goes in.","Stir soy sauce and mirin into the adult portion. Transfer all to a baking dish. Bake 35 mins.","BABY: Take the reserved portion and mash lightly — mushrooms finely chopped, spinach soft. Serve over soft brown rice with a sprinkle of ground sesame and ground cashew. Tomato vitamin C boosts iron from beef and spinach.","ADULTS: Serve over brown rice."]
         }
       },
       {
@@ -158,11 +158,11 @@ const WEEKS = [
       {step:"2",title:"Marinate chicken (Sunday)",detail:"Make teriyaki sauce, reserve baby portion, coat chicken. Store in sealed bag in fridge — goes straight in oven Sunday."},
       {step:"3",title:"Defrost edamame",detail:"Move from freezer to fridge Monday evening so it's ready for Sunday."},
       {step:"4",title:"Cook soba noodles",detail:"Cook, rinse in cold water, toss in tiny bit of sesame oil. Bag in portions. Cut baby portion into 2cm pieces before bagging."},
-      {step:"5",title:"Pre-grind sesame seeds",detail:"Grind to fine powder with pestle and mortar. Store in a small jar. Sprinkle over baby's meals all week."},
-      {step:"6",title:"Drain and bag lentils",detail:"Drain and rinse. Bag in portions ready for Tuesday."}
+      {step:"5",title:"Pre-grind sesame & cashew",detail:"Grind sesame seeds and a small amount of cashew to fine powder. Store in small jars. Sprinkle over baby's meals all week for calcium, zinc and healthy fats."},
+      {step:"6",title:"Slice shiitake (Thursday)",detail:"Finely slice shiitake mushrooms for the beef bake. Store in a tub in the fridge ready for Thursday."}
     ],
-    textures:["Lamb mince: ensure no large clumps. Mash lightly into lentils.","Tuna frittata: should be soft-set not rubbery — 22 mins max. Tuna flakes naturally into baby-friendly pieces.","Edamame: ALWAYS press flat between fingers — never serve whole.","Soba noodles: cut into 2cm pieces — never serve long noodles to baby.","Yoghurt: plain full-fat only — no added sugar. Fat content supports brain development.","Broccoli: must be very soft. Microwave with splash of water 1–2 mins if not tender enough."],
-    allergenCoverage:{hit:["Dairy","Wheat","Fish","Egg","Sesame","Soy"],skipped:["Peanut","Tree Nuts"]}
+    textures:["Lamb mince: ensure no large clumps. Mash lightly into lentils.","Beef & shiitake bake: chop shiitake mushrooms very finely — they can be chewy. Mash beef and spinach soft. Ground cashew on top must be fine powder, no chunks.","Edamame: ALWAYS press flat between fingers — never serve whole.","Soba noodles (Sunday): cut into 2cm pieces — never serve long noodles to baby.","Yoghurt: plain full-fat only — no added sugar. Fat content supports brain development.","Broccoli: must be very soft. Microwave with splash of water 1–2 mins if not tender enough."],
+    allergenCoverage:{hit:["Dairy","Wheat","Egg","Sesame","Soy","Tree Nuts"],skipped:["Peanut","Fish"]}
   },
   {
     title:"Week 4", nutritionFocus:"Brain Development & Immune Support",
@@ -170,49 +170,50 @@ const WEEKS = [
     babyPortionNote:"By week 4 baby should be comfortable with a range of textures. You can progress slightly — less mashing is fine if baby is tolerating well. Always supervise mealtimes.",
     meals:[
       {
-        day:"Tuesday", meal:"Baked Chicken & Sweet Potato Tray with Pea Puree",
-        allergens:["Egg","Wheat","Dairy"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
-        nutritionNotes:"Chicken = zinc + protein. Sweet potato = vitamin A + vitamin C to boost iron absorption. Peas = iron + zinc + vitamin C. Egg and parmesan add calcium and extra iron.",
+        day:"Tuesday", meal:"Miso Salmon Sheet Pan with Roasted Carrots & Edamame",
+        allergens:["Fish","Soy","Sesame"], nutrition:["Omega-3","Iron","Zinc","Vitamin C","Healthy Fats","Protein"],
+        nutritionNotes:"Salmon = omega-3 DHA + protein + iron. White miso adds umami and gut-friendly fermentation. Carrots = beta-carotene + vitamin C. Edamame = plant iron + zinc. Sesame adds calcium.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["4 chicken breasts","4 medium sweet potatoes, peeled and cubed 2cm","2 tbsp olive oil","1 tsp dried thyme","½ tsp smoked paprika","½ tsp garlic powder","400g frozen peas","100ml whole milk","60g butter","60g parmesan, grated","2 eggs, hard boiled (for baby iron boost)"],
-          steps:["Preheat oven to 200°C. Place chicken breasts in a baking dish. Arrange sweet potato cubes around them. Drizzle with olive oil, sprinkle garlic powder.","Cover with foil and bake 30 mins. Remove foil and bake a further 8 mins until chicken is golden.","Boil peas 3 mins. Blend with milk, butter and parmesan until smooth.","BABY: Shred chicken very finely. Mash sweet potato smooth. Serve alongside pea puree. Grate hard boiled egg over for extra iron. Both peas and sweet potato provide vitamin C.","ADULTS: Slice chicken, serve over sweet potato with pea puree. Season with salt and pepper."]
+          serves:"2 adults + baby — serves 2 nights", temp:"220°C / 425°F", time:"20 min",
+          ingredients:["4 salmon fillets (150g each)","2 tbsp white miso paste (low sodium)","1 tbsp mirin","1 tsp sesame oil","8 large carrots, sliced into coins","400g frozen edamame, defrosted","2 tbsp olive oil","1 tsp sesame seeds, ground (for baby)"],
+          steps:["Preheat oven to 220°C. Toss carrots in olive oil, roast 10 mins.","Mix miso, mirin and sesame oil into a glaze. Reserve one plain salmon fillet for baby — no glaze.","Brush adult fillets with miso glaze. Add all salmon and edamame to the tray. Bake 15 mins until salmon flakes.","BABY: Flake the plain fillet very finely — feel for pin bones every time. Mash carrots. Press each edamame flat. Sprinkle ground sesame. Carrots provide vitamin C to boost edamame iron.","ADULTS: Serve from the tray."]
         }
       },
       {
-        day:"Thursday", meal:"Baked Beef & Kidney Bean Chilli with Brown Rice & Avocado",
-        allergens:["Wheat","Dairy","Egg"], nutrition:["Iron","Zinc","Healthy Fats","Vitamin C","Protein","Fibre"],
-        nutritionNotes:"Beef = haem iron + zinc. Kidney beans = iron + zinc + fibre. Tinned tomatoes = vitamin C for iron absorption. Avocado = healthy fats + vitamin C. One of the highest iron meals in the plan.",
+        day:"Thursday", meal:"Polenta Bake with Zucchini, Tomato & Beef Ragout",
+        allergens:["Dairy"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
+        nutritionNotes:"Beef = haem iron + zinc. Courgette and tomato = vitamin C to boost iron absorption. Soft polenta is gentle for baby and naturally smooth. Parmesan adds calcium. Adapted from Martha Rose Shulman's polenta with added beef for iron.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"180°C / 355°F", time:"45 min",
-          ingredients:["800g lean beef mince","2 tins (400g) kidney beans, drained","4 tins (400g each) chopped tomatoes","1 tsp smoked paprika","1 tsp dried oregano","½ tsp garlic powder","600g brown rice, cooked","2 ripe avocados","100g full-fat cheddar, grated","2 eggs, hard boiled"],
-          steps:["Preheat oven to 180°C. Brown mince 3 mins on hob. Drain fat.","Add kidney beans, tomatoes, cumin and garlic. Transfer to oven. Bake covered 40 mins.","BABY: Scoop baby portion before adding paprika. Mash kidney beans — never whole. Mash a quarter avocado alongside for healthy fats. Grate hard boiled egg over for extra iron. Serve over soft brown rice.","ADULTS: Stir in smoked paprika. Serve over rice with sliced avocado and grated cheddar."]
+          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
+          ingredients:["800g lean beef mince","4 courgettes, sliced into half-moons","4 tins (400g) chopped tomatoes","1 small onion, finely chopped","½ tsp garlic powder","1 tsp dried oregano","1 tsp dried basil","1 tbsp chopped fresh mint","500g cooked polenta, sliced","80g parmesan, grated","2 tbsp olive oil"],
+          steps:["Preheat oven to 190°C. Brown beef 3 mins, drain fat. Add onion, courgette, tomatoes, garlic, oregano and basil. Simmer 5 mins.","Oil a baking dish and layer polenta slices on the base. Top with the beef-courgette ragout. Scatter parmesan over.","Bake 30 mins until bubbling and golden.","BABY: Scoop a portion — polenta is naturally soft. Mash the ragout lightly, making sure courgette is very soft. Tomato vitamin C boosts beef iron. Use only a small amount of parmesan (sodium).","ADULTS: Serve with fresh mint scattered over."],
+          attribution:"Adapted from \"Polenta With Zucchini and Tomatoes\" by Martha Rose Shulman, NYT Cooking"
         }
       },
       {
-        day:"Sunday", meal:"Baked Salmon with Roasted Carrot, Lentil & Tahini Tray",
-        allergens:["Fish","Sesame","Soy","Tree Nuts"], nutrition:["Omega-3","Iron","Zinc","Calcium","Vitamin C","Healthy Fats"],
-        nutritionNotes:"Salmon = great omega-3 DHA + protein + iron. Lentils = iron. Carrots = beta-carotene + vitamin C. Tahini = calcium + zinc + healthy fats. Cashews add extra zinc.",
+        day:"Sunday", meal:"Baked Chicken & Sweet Potato Tray with Pea Puree",
+        allergens:["Egg","Dairy","Tree Nuts"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
+        nutritionNotes:"Chicken = zinc + protein. Sweet potato = vitamin A + vitamin C to boost iron absorption. Peas = iron + zinc + vitamin C. Egg and parmesan add calcium and extra iron. Ground almond adds healthy fats and zinc.",
         baby:true,
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["4 salmon fillets","2 tins (400g) green lentils, drained","8 large carrots, sliced into coins","4 tbsp tahini","2 tbsp low-sodium soy sauce","½ tsp turmeric","½ tsp ginger powder","2 tbsp olive oil","100g cashews, finely ground","600g quinoa or brown rice, cooked"],
-          steps:["Preheat oven to 200°C. Toss carrots in olive oil. Roast 10 mins.","Add lentils around carrots. Nestle salmon fillets on top.","Mix tahini with soy sauce and 2 tbsp water. Drizzle half over tray. Bake 15 mins.","BABY: Flake salmon carefully — feel for pin bones with fingertips. Mash carrots smooth. Mix with lentils and a drizzle of tahini. Scatter ground cashews for zinc and healthy fats. Carrots = vitamin C to boost lentil iron.","ADULTS: Serve over quinoa/rice with remaining tahini dressing."]
+          ingredients:["4 chicken breasts","4 medium sweet potatoes, peeled and cubed 2cm","2 tbsp olive oil","1 tsp dried thyme","½ tsp garlic powder","400g frozen peas","100ml whole milk","60g butter","60g parmesan, grated","2 eggs, hard boiled (for baby iron boost)","2 tbsp almonds, finely ground (for baby topping)"],
+          steps:["Preheat oven to 200°C. Place chicken breasts in a baking dish. Arrange sweet potato cubes around them. Drizzle with olive oil, sprinkle garlic powder.","Cover with foil and bake 30 mins. Remove foil and bake a further 8 mins until chicken is golden.","Boil peas 3 mins. Blend with milk, butter and parmesan until smooth.","BABY: Shred chicken very finely. Mash sweet potato smooth. Serve alongside pea puree. Grate hard boiled egg over and sprinkle ground almond for extra iron and zinc. Both peas and sweet potato provide vitamin C.","ADULTS: Slice chicken, serve over sweet potato with pea puree. Season with salt and pepper."]
         }
       }
     ],
     prepChecklist:[
-      {step:"1",title:"Cube sweet potatoes (Tuesday)",detail:"Peel and cube into 2cm pieces. Store in a ziplock bag in the fridge. Goes straight into the baking dish on Tuesday."},
-      {step:"2",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
-      {step:"3",title:"Brown beef mince (Thursday)",detail:"Brown 3 mins. Drain fat. Cool. Store in container. Thursday just tip into oven pot with beans and tomatoes."},
-      {step:"4",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, fridge. Grate over baby meals all week as easy iron boost."},
-      {step:"5",title:"Ground cashews for topping",detail:"Pulse to fine crumbs. Store in jar. Use as baby topping for zinc and healthy fats."},
-      {step:"6",title:"Drain and portion kidney beans and lentils",detail:"Drain and rinse both. Bag separately. Fridge until needed."}
+      {step:"1",title:"Make miso glaze (Tuesday)",detail:"Mix white miso, mirin and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — remember to reserve one plain fillet for baby first."},
+      {step:"2",title:"Slice carrots & defrost edamame (Tuesday)",detail:"Slice carrots into coins, bag in fridge. Move edamame from freezer to fridge Monday evening."},
+      {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta."},
+      {step:"4",title:"Cube sweet potatoes (Sunday)",detail:"Peel and cube into 2cm pieces. Store in a ziplock bag in the fridge for Sunday's chicken tray."},
+      {step:"5",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
+      {step:"6",title:"Grind almonds for topping",detail:"Pulse a small amount of almonds to fine crumbs. Store in a jar. Use as baby topping on Sunday for zinc and healthy fats."}
     ],
-    textures:["Chicken (Tuesday): shred very finely along the grain. If in doubt, chop finely with a knife after shredding.","Pea puree: blend until very smooth. Pass through a sieve if any skins remain — skins can be a choking texture for baby.","Kidney beans: MUST be mashed or squashed before serving — whole kidney beans are a choking hazard.","Avocado: mash with a fork. Naturally smooth — no extra prep needed.","Salmon: flake finely as always, run fingertips through to feel for pin bones every time.","Carrots: must be roasted until completely soft. Mash for baby."],
-    allergenCoverage:{hit:["Fish","Egg","Wheat","Dairy","Sesame","Soy","Tree Nuts"],skipped:["Peanut"]}
+    textures:["Miso salmon (Tuesday): flake the plain baby fillet very finely, run fingertips through to feel for pin bones every time.","Edamame: ALWAYS press flat between fingers — never serve whole.","Polenta: naturally soft and smooth — ideal for baby. Mash the beef ragout lightly, ensure courgette is very soft.","Carrots: must be roasted until completely soft. Mash for baby.","Pea puree (Sunday): blend until very smooth. Pass through a sieve if any skins remain.","Ground almond (Sunday): fine powder only for baby — no visible nut pieces. Sprinkle as a topping."],
+    allergenCoverage:{hit:["Fish","Soy","Sesame","Dairy","Egg","Tree Nuts"],skipped:["Peanut","Wheat"]}
   },
   {
     title:"Week 5", nutritionFocus:"Gut Health, Fibre & Immune Boost",
@@ -220,25 +221,27 @@ const WEEKS = [
     babyPortionNote:"At 10–11 months baby can start handling slightly more texture. Offer soft finger foods alongside mashed portions to encourage self-feeding and motor development.",
     meals:[
       {
-        day:"Tuesday", meal:"Baked Miso Cod with Roasted Sweet Potato & Sesame Edamame",
-        allergens:["Fish","Soy","Sesame"], nutrition:["Omega-3","Iron","Zinc","Vitamin C","Healthy Fats","Protein"],
-        nutritionNotes:"Cod = lean protein + omega-3. Miso = fermented probiotic + zinc. Sweet potato = vitamin A + C. Edamame = iron + zinc + plant protein. Sesame = calcium + healthy fats.",
+        day:"Tuesday", meal:"Miso Butter Cod with Roasted Sweet Potato & Edamame",
+        allergens:["Fish","Soy","Sesame","Dairy"], nutrition:["Omega-3","Iron","Zinc","Vitamin C","Healthy Fats","Protein"],
+        nutritionNotes:"Cod = lean protein + omega-3. White miso adds umami and fermentation; a little butter makes the glaze rich and baby-friendly. Sweet potato = vitamin A + C. Edamame = iron + zinc. Sesame adds calcium. Adapted from Namiko Chen's miso fish method.",
         baby:true,
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"25 min",
-          ingredients:["4 cod fillets","4 tsp white miso paste (low sodium)","2 tbsp sesame oil","½ tsp ginger powder","4 medium sweet potatoes, peeled and cubed","400g frozen edamame, defrosted","2 tbsp olive oil","1 tsp sesame seeds, ground (for baby)"],
-          steps:["Preheat oven to 200°C. Toss sweet potato cubes in olive oil. Roast 15 mins.","Mix miso and sesame oil. Brush over cod fillets. Push sweet potato to sides, add cod and edamame to tray.","Bake further 12–15 mins until cod flakes easily.","BABY: Flake cod very finely — feel for bones. Mash sweet potato smooth. Press each edamame flat between fingers. Sprinkle ground sesame seeds over. Sweet potato = vitamin C to boost edamame iron.","ADULTS: Serve from tray. Season with extra sesame oil and black pepper."]
+          ingredients:["4 cod fillets","4 tsp white miso paste (low sodium)","20g butter, softened","1 tsp mirin","½ tsp ginger powder","4 medium sweet potatoes, peeled and cubed","400g frozen edamame, defrosted","2 tbsp olive oil","1 tsp sesame seeds, ground (for baby)"],
+          steps:["Preheat oven to 200°C. Toss sweet potato cubes in olive oil. Roast 15 mins.","Mash miso, butter, mirin and ginger into a paste. Reserve one plain cod fillet for baby — no paste.","Spread miso butter over adult fillets. Push sweet potato to the sides, add all cod and edamame to the tray. Bake 12–15 mins until cod flakes.","BABY: Flake the plain fillet very finely — feel for bones. Mash sweet potato smooth. Press each edamame flat. Sprinkle ground sesame. Sweet potato vitamin C boosts edamame iron.","ADULTS: Serve from the tray with extra black pepper."],
+          attribution:"Adapted from \"Miso Salmon\" by Namiko Hirasawa Chen, Just One Cookbook"
         }
       },
       {
-        day:"Thursday", meal:"Baked Chicken & Lentil Stuffed Peppers with Feta",
-        allergens:["Dairy","Egg","Wheat"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium","Fibre"],
-        nutritionNotes:"Red peppers baked = concentrated vitamin C — the highest C content of any veg. Lentils = iron + fibre. Chicken = zinc + protein. Feta = calcium.",
+        day:"Thursday", meal:"Sheet Pan Teriyaki Chicken Thighs with Broccoli & Snap Peas",
+        allergens:["Soy","Wheat","Sesame"], nutrition:["Iron","Zinc","Protein","Vitamin C","Fibre"],
+        nutritionNotes:"Chicken thighs = iron + zinc + protein, juicier than breast. Homemade teriyaki keeps sodium low. Broccoli and snap peas = vitamin C to boost iron. Sesame adds calcium. Adapted from Just One Cookbook's teriyaki method.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
-          ingredients:["8 large red peppers, halved and deseeded","600g chicken mince (or finely diced chicken breast)","2 tins (400g) green lentils, drained","2 tins (400g) chopped tomatoes","1 tsp mild curry powder","½ tsp turmeric","½ tsp garlic powder","160g feta, crumbled","2 eggs, beaten (to bind)"],
-          steps:["Preheat oven to 190°C. Mix chicken mince, lentils, half the tomatoes, garlic, cumin and beaten egg.","Fill each pepper half with the mixture. Pour remaining tomatoes into the base of the dish. Place peppers in dish.","Crumble feta over the top. Bake 38–40 mins until peppers are very soft and filling is cooked through.","BABY: Scoop filling out of one pepper half — the pepper itself will be very soft and can be cut into small pieces too. Mash filling lightly. The roasted red pepper is extremely high in vitamin C and boosts lentil and chicken iron significantly.","ADULTS: Serve pepper halves as is with extra tomato sauce from the dish."]
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"40 min",
+          ingredients:["8 bone-in skin-on chicken thighs","4 tbsp low-sodium soy sauce","2 tbsp mirin","1 tsp ginger powder","½ tsp garlic powder","400g broccoli florets","200g sugar snap peas","2 tbsp olive oil","1 tsp sesame seeds, ground (for baby)"],
+          steps:["Mix soy, mirin, ginger and garlic into a teriyaki sauce. Reserve one plain thigh and a little plain sauce for baby before glazing.","Preheat oven to 200°C. Coat adult thighs in sauce, place skin-up on a lined tray. Bake 25 mins.","Toss broccoli and snap peas in olive oil, add to the tray. Bake 15 more mins.","BABY: Shred the reserved plain thigh very finely — remove skin and bone. Cut broccoli and snap peas into tiny soft pieces. Sprinkle ground sesame. A tiny brush of teriyaki only. Broccoli vitamin C boosts chicken iron.","ADULTS: Serve thighs with veg, spoon over pan juices."],
+          attribution:"Adapted from \"Teriyaki Chicken\" method, Just One Cookbook"
         }
       },
       {
@@ -254,14 +257,14 @@ const WEEKS = [
       }
     ],
     prepChecklist:[
-      {step:"1",title:"Prepare stuffed pepper filling (Thursday)",detail:"Mix chicken mince, lentils, tomatoes, garlic, cumin and egg. Store in a container in the fridge. On Thursday just fill the peppers and bake — the stuffing is completely ready."},
-      {step:"2",title:"Grind almonds (Sunday)",detail:"Pulse almonds to very fine crumbs. Mix with parmesan. Store in a jar. On Sunday just dip salmon in egg and press crust on — takes 2 mins."},
-      {step:"3",title:"Defrost edamame (Tuesday)",detail:"Move from freezer to fridge Monday evening."},
-      {step:"4",title:"Cube sweet potatoes (Tuesday)",detail:"Peel and cube 2cm. Store in ziplock bag in fridge."},
+      {step:"1",title:"Make miso butter (Tuesday)",detail:"Mash white miso, softened butter, mirin and ginger into a paste. Store in fridge. On Tuesday spread over adult cod — reserve one plain fillet for baby first."},
+      {step:"2",title:"Cube sweet potatoes & defrost edamame (Tuesday)",detail:"Peel and cube sweet potato 2cm, bag in fridge. Move edamame from freezer to fridge Monday evening."},
+      {step:"3",title:"Make teriyaki sauce (Thursday)",detail:"Mix soy, mirin, ginger and garlic. Reserve a little plain sauce and plan one plain thigh for baby. Store sauce in a jar — coat adult thighs Thursday."},
+      {step:"4",title:"Grind almonds (Sunday)",detail:"Pulse almonds to very fine crumbs, mix with parmesan. Store in a jar. On Sunday just dip chicken in egg and press crust on."},
       {step:"5",title:"Cook brown rice",detail:"Cook large batch. Cool. Bag into portions for Sunday and leftovers."},
-      {step:"6",title:"Drain and bag lentils",detail:"Drain and rinse. Bag in portions for Thursday."}
+      {step:"6",title:"Cut broccoli & snap peas (Thursday)",detail:"Cut broccoli into florets and trim snap peas. Bag in fridge ready for Thursday's tray."}
     ],
-    textures:["Cod: flake very finely and feel for bones with fingertips before every serve.","Stuffed pepper filling: already soft — mash lightly for baby. The pepper itself becomes very soft after 40 mins and can be cut into small pieces.","Edamame: ALWAYS press flat — never whole.","Asparagus: cut into 1cm pieces after roasting. Tips are soft; stalk end should be fork-tender — if not, microwave 1 min with water.","Almond crust (Sunday): must be ground to fine powder for baby — no visible nut pieces. Mix into rice as a topping rather than giving baby the crusted chicken directly.","Brown rice: add a splash of water when reheating to keep it moist and easy for baby to gum."],
+    textures:["Cod (Tuesday): flake very finely and feel for bones with fingertips before every serve.","Edamame: ALWAYS press flat — never whole.","Teriyaki chicken thighs (Thursday): shred the plain baby thigh very finely, remove all skin and bone. Cut broccoli and snap peas into tiny soft pieces.","Snap peas: must be very soft and finely chopped — fibrous strings are a choking risk if undercooked.","Almond crust (Sunday): must be ground to fine powder for baby — no visible nut pieces. Mix into rice as a topping rather than giving baby the crusted chicken directly.","Brown rice: add a splash of water when reheating to keep it moist and easy for baby to gum."],
     allergenCoverage:{hit:["Fish","Soy","Sesame","Dairy","Egg","Wheat","Tree Nuts"],skipped:["Peanut"]}
   },
   {
@@ -270,49 +273,51 @@ const WEEKS = [
     babyPortionNote:"By week 6 baby is approaching 11 months. Finger foods can now be slightly larger — strips and small chunks baby can pick up are ideal for pincer grip development. Keep supervising.",
     meals:[
       {
-        day:"Tuesday", meal:"Sheet Pan Beef, Spinach & Kidney Bean Bake with Roasted Pepper",
-        allergens:["Wheat","Egg","Dairy"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium","Fibre"],
+        day:"Tuesday", meal:"Teriyaki Salmon with Pak Choi & Edamame",
+        allergens:["Fish","Soy","Sesame"], nutrition:["Omega-3","Iron","Zinc","Healthy Fats","Vitamin C","Protein"],
+        nutritionNotes:"Salmon = omega-3 DHA + iron + protein. Clean teriyaki glaze (no added sugar for baby). Pak choi = vitamin C + iron + calcium. Edamame = plant iron + zinc. Sesame adds calcium. Adapted from Namiko Chen's teriyaki salmon.",
+        baby:true,
+        recipe:{
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"20 min",
+          ingredients:["4 salmon fillets (150g each)","4 tbsp low-sodium soy sauce","2 tbsp mirin","1 tsp ginger powder","4 heads pak choi, halved","400g frozen edamame, defrosted","1 tbsp sesame oil","1 tsp sesame seeds, ground (for baby)"],
+          steps:["Mix soy, mirin, ginger and sesame oil into a teriyaki glaze. Reserve one plain salmon fillet for baby — no glaze.","Preheat oven to 200°C. Brush adult fillets with glaze. Place all salmon on a lined tray. Bake 12 mins.","Add pak choi and edamame to the tray, brushing the adults' side with a little glaze. Bake 6–8 more mins.","BABY: Flake the plain fillet very finely — check for pin bones. Cut pak choi into small soft pieces. Press each edamame flat. Sprinkle ground sesame. Pak choi provides vitamin C and iron.","ADULTS: Serve salmon over pak choi and edamame, spoon glaze over."],
+          attribution:"Adapted from \"Teriyaki Salmon\" by Namiko Hirasawa Chen, Just One Cookbook"
+        }
+      },
+      {
+        day:"Thursday", meal:"One-Pan Orzo with Spinach, Feta & Cannellini Beans",
+        allergens:["Wheat","Dairy"], nutrition:["Iron","Calcium","Vitamin C","Protein","Fibre"],
+        nutritionNotes:"Cannellini beans = plant iron + protein + fibre (added to the classic for staying power). Spinach = iron. Peas and lemon = vitamin C to boost absorption. Feta adds calcium. Adapted from Melissa Clark's one-pan orzo with beans added for iron and protein.",
+        baby:true,
+        recipe:{
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
+          ingredients:["300g orzo","4 large scallions, sliced","2 large garlic cloves, minced","250g baby spinach, chopped","2 tins (400g) cannellini beans, drained","700ml low-sodium veg stock","1 tsp lemon zest","160g feta, crumbled","1 cup chopped fresh dill","2 tbsp olive oil","400g frozen peas"],
+          steps:["Preheat oven to 200°C. In an oven dish, mix orzo, scallions, garlic, spinach, beans, stock, lemon zest and olive oil.","Cover with foil. Bake 20 mins. Stir, add peas, bake 8 more mins until orzo is tender.","Stir through most of the feta and dill. Reserve baby's portion before adding the final feta.","BABY: Mash the beans (never whole — choking risk). Orzo and spinach should be very soft. Use only a small amount of feta (sodium). Spinach and peas provide vitamin C to boost bean iron.","ADULTS: Top with remaining feta and dill."],
+          attribution:"Adapted from \"One-Pan Orzo With Spinach and Feta\" by Melissa Clark, NYT Cooking"
+        }
+      },
+      {
+        day:"Sunday", meal:"Sheet Pan Beef, Spinach & Kidney Bean Bake with Roasted Pepper",
+        allergens:["Egg","Dairy"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium","Fibre"],
         nutritionNotes:"Triple iron hit: beef + spinach + kidney beans. Red pepper = maximum vitamin C to boost all three. Egg and cheese add calcium and additional iron. Highest single-meal iron content in the plan.",
         baby:true,
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
           ingredients:["800g lean beef mince","200g baby spinach, chopped","2 tins (400g) kidney beans, drained","4 red peppers, sliced","2 tins (400g) chopped tomatoes","1 tsp smoked paprika","1 tsp dried oregano","½ tsp garlic powder","3 eggs, beaten","100g cheddar, grated"],
-          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on hob. Drain fat.","Add spinach, kidney beans, tomatoes, garlic and cumin. Stir. Transfer to large baking dish.","Lay red pepper slices over the top. Pour beaten eggs over. Scatter cheddar over.","Bake 35 mins until set and golden on top.","BABY: Scoop a portion ensuring all three iron sources are included. Mash kidney beans. Break up any egg chunks. The red pepper on top = high vitamin C to boost beef, spinach and kidney bean iron simultaneously.","ADULTS: Serve from dish with crusty bread."]
-        }
-      },
-      {
-        day:"Thursday", meal:"Baked Beef & Lentil Stuffed Courgettes with Tomato Sauce & Avocado",
-        allergens:["Fish","Egg","Wheat","Sesame"], nutrition:["Iron","Omega-3","Calcium","Vitamin C","Healthy Fats","Zinc"],
-        nutritionNotes:"Beef = haem iron + zinc. Lentils = plant iron. Tomato sauce = vitamin C to boost both iron sources. Avocado = healthy fats + vitamin C. Sesame seeds = calcium. Double iron source meal.",
-        baby:true,
-        recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"25 min",
-          ingredients:["800g lean beef mince","2 tins (400g) green lentils, drained","8 large courgettes, halved lengthways","2 tins (400g) chopped tomatoes","1 tsp dried oregano","½ tsp smoked paprika","½ tsp garlic powder","1 tbsp sesame seeds, ground","2 ripe avocados","80g cheddar, grated"],
-          steps:["Preheat oven to 190°C. Scoop out the inside of each courgette half to make a channel. Finely chop the scooped flesh.","Mix beef mince, lentils, courgette flesh, garlic powder and cumin. Fill each courgette half with the mixture.","Pour chopped tomatoes into the base of a large baking dish. Nestle stuffed courgettes in. Scatter grated cheddar over.","Bake 35–38 mins until beef is cooked through and courgette is very tender.","BABY: Scoop filling out of one courgette half — the courgette itself will be very soft and can also be cut into small pieces. Mash lentils in baby portion. Serve with mashed avocado for healthy fats and vitamin C. Sprinkle ground sesame seeds over. The tomato sauce provides vitamin C to boost beef and lentil iron.","ADULTS: Serve stuffed courgettes with extra tomato sauce from the dish."]
-        }
-      },
-      {
-        day:"Sunday", meal:"Baked Teriyaki Salmon with Peanut Soba Noodles & Pak Choi",
-        allergens:["Fish","Peanut","Soy","Sesame","Wheat"], nutrition:["Omega-3","Iron","Zinc","Healthy Fats","Vitamin C","Protein"],
-        nutritionNotes:"Salmon = DHA omega-3. Peanut butter = healthy fats + zinc. Soba noodles = iron + wholegrains. Pak choi = vitamin C + iron + calcium. Sesame = calcium + healthy fats. Covers 5 allergen groups in one meal.",
-        baby:true,
-        recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"25 min",
-          ingredients:["4 salmon fillets","6 tbsp low-sodium soy sauce","2 tbsp sesame oil","1 tsp ginger powder","2 tbsp maple syrup (adults only)","6 tbsp smooth peanut butter (no added salt)","300ml low-sodium stock","400g soba noodles","4 heads pak choi, halved"],
-          steps:["Preheat oven to 200°C. Mix soy and sesame oil. Reserve 2 tbsp for baby before adding maple syrup. Brush salmon with adult sauce.","Place salmon on lined tray. Bake 18–20 mins.","Whisk peanut butter with stock into a sauce. Cook soba noodles 5 mins. Steam pak choi 3 mins.","Toss noodles with peanut sauce.","BABY: Use reserved baby sauce on salmon. Flake very finely — check for bones. Cut noodles into 2cm pieces. Cut pak choi into small pieces. Thin peanut sauce with extra stock. The pak choi = vitamin C + iron to complement salmon and noodle iron.","ADULTS: Serve salmon over peanut noodles with pak choi."]
+          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on hob. Drain fat.","Add spinach, kidney beans, tomatoes and garlic. Stir. Transfer to a large baking dish. Reserve baby's portion now, before the paprika.","Lay red pepper slices over the top. Pour beaten eggs over. Scatter cheddar over. Stir paprika into the adult portion. Bake 35 mins until set and golden on top.","BABY: Scoop the reserved portion ensuring all three iron sources are included. Mash kidney beans. Break up any egg chunks. The red pepper = high vitamin C to boost beef, spinach and kidney bean iron simultaneously.","ADULTS: Serve from dish with crusty bread."]
         }
       }
     ],
     prepChecklist:[
-      {step:"1",title:"Make stuffed courgette filling (Thursday)",detail:"Mix beef mince, lentils, chopped courgette flesh, garlic and cumin. Store in a container in the fridge. On Thursday just fill the courgettes and pour tomatoes into the dish — done in 5 mins before going in the oven."},
-      {step:"2",title:"Brown beef mince (Tuesday)",detail:"Brown 3 mins. Drain fat. Cool. Store in container. Tuesday just layer into baking dish with spinach, beans, tomatoes and eggs."},
-      {step:"3",title:"Make peanut sauce (Sunday)",detail:"Whisk peanut butter with stock. Store in jar in fridge. Reheat gently Sunday."},
-      {step:"4",title:"Marinate salmon (Sunday)",detail:"Reserve baby portion of teriyaki sauce before adding maple syrup. Coat salmon in adult sauce. Store in sealed bag in fridge."},
-      {step:"5",title:"Cook soba noodles",detail:"Cook, rinse, toss in tiny bit of sesame oil. Bag in portions. Cut baby portion into 2cm pieces before bagging."},
-      {step:"6",title:"Drain and bag lentils and kidney beans",detail:"Drain and rinse both. Bag separately. Fridge until needed. Lightly mash lentil portion with a fork before bagging — makes filling the courgettes faster on Thursday."}
+      {step:"1",title:"Make teriyaki glaze (Tuesday)",detail:"Mix soy, mirin, ginger and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — reserve one plain fillet for baby first."},
+      {step:"2",title:"Defrost edamame (Tuesday)",detail:"Move edamame from freezer to fridge Monday evening so it's ready for Tuesday's salmon tray."},
+      {step:"3",title:"Chop orzo veg (Thursday)",detail:"Slice scallions, mince garlic, chop spinach. Bag together in the fridge. Thursday everything goes into one dish with the orzo and stock."},
+      {step:"4",title:"Drain & bag cannellini beans (Thursday)",detail:"Drain and rinse cannellini beans. Bag in fridge. Lightly mash baby's portion when serving."},
+      {step:"5",title:"Brown beef mince (Sunday)",detail:"Brown 3 mins, drain fat, cool and store. Sunday just layer into baking dish with spinach, kidney beans, tomatoes and eggs — reserve baby's portion before the paprika."},
+      {step:"6",title:"Drain & bag kidney beans (Sunday)",detail:"Drain and rinse kidney beans. Bag separately in the fridge until Sunday."}
     ],
-    textures:["Beef bake (Tuesday): mash kidney beans throughout. Break up any egg that has set in chunks. Red pepper should be very soft — peel if skin is still firm.","Stuffed courgettes: scoop filling out for baby — already soft from baking. The courgette shell itself will be very tender after 38 mins and can be cut into small pieces too.","Avocado: mash fresh on the day — browns quickly once cut. A quarter avocado is plenty for baby.","Pak choi: steam until leaves are completely wilted and stalk is fork-tender. Cut stalk into very small pieces.","Soba noodles: always cut into 2cm pieces for baby — never long strands.","Salmon: flake finely as always. Feel for pin bones every single time."],
-    allergenCoverage:{hit:["Wheat","Egg","Dairy","Fish","Sesame","Peanut","Soy"],skipped:["Tree Nuts"]}
+    textures:["Teriyaki salmon (Tuesday): flake the plain baby fillet very finely. Feel for pin bones every single time.","Pak choi: steam until leaves are completely wilted and stalk is fork-tender. Cut stalk into very small pieces.","Edamame: ALWAYS press flat — never whole.","Orzo (Thursday): cook until very soft. Small grain shape is easy for baby once tender.","Cannellini beans: MUST be mashed before serving — whole beans are a choking hazard.","Beef bake (Sunday): mash kidney beans throughout. Break up any egg that has set in chunks. Red pepper should be very soft — peel if skin is still firm."],
+    allergenCoverage:{hit:["Wheat","Egg","Dairy","Fish","Sesame","Soy"],skipped:["Peanut","Tree Nuts"]}
   }
 ];
 
@@ -380,39 +385,40 @@ const GROCERY_LISTS = [
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup","Garlic powder","Dried thyme","Mild curry powder","Dried rosemary"] },
   ]},
   { week: 3, categories: [
-    { name: "🥦 Fresh Veg", items: ["4 courgettes","200g cherry tomatoes","400g broccoli florets","400g frozen edamame"] },
-    { name: "🥩 Meat & Fish", items: ["800g lamb mince","4 tins tuna in spring water (320g total)","4 chicken breasts"] },
-    { name: "🧀 Dairy & Eggs", items: ["Full-fat plain yoghurt (300g)","100g cheddar","200ml whole milk","12 eggs","Butter"] },
-    { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Jasmine rice"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Sesame seeds","Maple syrup (adults)","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
+    { name: "🥦 Fresh Veg", items: ["4 courgettes","200g shiitake mushrooms","200g baby spinach","400g broccoli florets","400g frozen edamame"] },
+    { name: "🥩 Meat & Fish", items: ["800g lamb mince","800g lean beef mince","4 chicken breasts"] },
+    { name: "🧀 Dairy & Eggs", items: ["Full-fat plain yoghurt (300g)","4 eggs"] },
+    { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Brown rice (large bag — large batch needed)"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)"] },
+    { name: "🥜 Nuts & Seeds", items: ["Cashews (to grind, small amount)","Ground sesame seeds"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
   ]},
   { week: 4, categories: [
-    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen peas","2 ripe avocados","8 large carrots"] },
-    { name: "🥩 Meat & Fish", items: ["4 chicken breasts (Tuesday)","800g lean beef mince","4 salmon fillets"] },
-    { name: "🧀 Dairy & Eggs", items: ["100g full-fat cheddar","6 eggs","100ml whole milk","60g butter","Parmesan (60g)"] },
-    { name: "🌾 Grains & Pasta", items: ["Brown rice (large bag — large batch needed)","600g quinoa"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","4 tbsp tahini"] },
-    { name: "🥜 Nuts & Seeds", items: ["100g cashews (to grind)","Ground sesame seeds"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Smoked paprika","Dried thyme","Dried oregano","Turmeric","Ginger powder"] },
+    { name: "🥦 Fresh Veg", items: ["8 large carrots","4 courgettes","1 small onion","4 medium sweet potatoes","400g frozen peas","400g frozen edamame"] },
+    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","4 chicken breasts"] },
+    { name: "🧀 Dairy & Eggs", items: ["Parmesan (80g)","60g butter","6 eggs","100ml whole milk"] },
+    { name: "🌾 Grains & Pasta", items: ["500g cooked polenta (or polenta to cook)"] },
+    { name: "🥫 Tins & Jars", items: ["4 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
+    { name: "🥜 Nuts & Seeds", items: ["Almonds (to grind, small amount)","Ground sesame seeds"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Sesame oil","Mirin","Garlic powder","Dried thyme","Dried oregano","Dried basil","Fresh mint","Ginger powder"] },
   ]},
   { week: 5, categories: [
-    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen edamame","8 large red peppers","400g asparagus"] },
-    { name: "🥩 Meat & Fish", items: ["4 cod fillets","600g chicken mince (or 4 chicken breasts, finely diced)","4 chicken breasts (Sunday)"] },
-    { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","6 eggs","Parmesan (60g)","Full-fat plain yoghurt"] },
+    { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen edamame","400g broccoli florets","200g sugar snap peas","400g asparagus"] },
+    { name: "🥩 Meat & Fish", items: ["4 cod fillets","8 bone-in skin-on chicken thighs","4 chicken breasts (Sunday)"] },
+    { name: "🧀 Dairy & Eggs", items: ["20g butter","Parmesan (60g)","2 eggs"] },
     { name: "🌾 Grains & Pasta", items: ["Brown rice (large bag — large batch needed)"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
-    { name: "🥜 Nuts & Seeds", items: ["160g almonds (to grind)","Ground sesame seeds","Sesame oil"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Ginger powder","Mild curry powder","Turmeric","Dried tarragon","Maple syrup (adults)"] },
+    { name: "🥫 Tins & Jars", items: ["White miso paste (low sodium)"] },
+    { name: "🥜 Nuts & Seeds", items: ["160g almonds (to grind)","Ground sesame seeds"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Mirin","Garlic powder","Ginger powder","Dried tarragon"] },
   ]},
   { week: 6, categories: [
-    { name: "🥦 Fresh Veg", items: ["4 red peppers","200g baby spinach","8 large courgettes","4 heads pak choi","2 ripe avocados","2 ripe tomatoes"] },
-    { name: "🥩 Meat & Fish", items: ["800g lean beef mince (Tuesday)","800g lean beef mince (Thursday stuffed courgettes)","4 salmon fillets"] },
-    { name: "🧀 Dairy & Eggs", items: ["100g cheddar","6 eggs","Low-sodium chicken stock (500ml)"] },
-    { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Jasmine rice"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","4 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)"] },
-    { name: "🥜 Nuts & Seeds", items: ["Ground sesame seeds","Sesame oil"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup (adults)","Garlic powder","Smoked paprika","Dried oregano","Ginger powder","Breadcrumbs (100g)"] },
+    { name: "🥦 Fresh Veg", items: ["4 heads pak choi","400g frozen edamame","4 scallions","250g baby spinach","200g baby spinach (Sunday bake)","4 red peppers","400g frozen peas","Fresh dill","1 lemon"] },
+    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince"] },
+    { name: "🧀 Dairy & Eggs", items: ["160g feta","100g cheddar","3 eggs"] },
+    { name: "🌾 Grains & Pasta", items: ["300g orzo"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins cannellini beans (400g each)","2 tins kidney beans (400g each)","2 tins chopped tomatoes (400g each)","Low-sodium veg stock (700ml)"] },
+    { name: "🥜 Nuts & Seeds", items: ["Ground sesame seeds"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Smoked paprika","Dried oregano","Ginger powder"] },
   ]},
 ];
 
@@ -554,6 +560,9 @@ export default function App() {
                       })}
                     </div>
                   </div>
+                  {m.recipe.attribution && (
+                    <p style={{fontSize:"10px",color:"#9ca3af",fontStyle:"italic",margin:"10px 0 0",lineHeight:1.5}}>{m.recipe.attribution}</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -686,7 +695,7 @@ export default function App() {
                 </div>
               ))}
               <div style={{background:"#fef9c3",border:"1px solid #fde68a",borderRadius:"10px",padding:"10px 14px",marginTop:"6px"}}>
-                <p style={{fontSize:"11px",color:"#78350f",margin:0}}>💡 <strong>Pantry staples to always keep stocked:</strong> olive oil, low-sodium soy sauce, sesame oil, garlic powder, cumin, ground sesame seeds, full-fat plain yoghurt, eggs, butter.</p>
+                <p style={{fontSize:"11px",color:"#78350f",margin:0}}>💡 <strong>Pantry staples to always keep stocked:</strong> olive oil, low-sodium soy sauce, sesame oil, mirin, garlic powder, ground sesame seeds, full-fat plain yoghurt, eggs, butter.</p>
               </div>
             </div>
           )}
