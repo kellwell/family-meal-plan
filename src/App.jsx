@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const ALLERGENS = ["Egg","Peanut","Fish","Wheat","Tree Nuts","Soy","Sesame","Dairy"];
-const COLORS = {"Egg":"#f59e0b","Peanut":"#92400e","Fish":"#0ea5e9","Wheat":"#d97706","Tree Nuts":"#16a34a","Soy":"#7c3aed","Sesame":"#dc2626","Dairy":"#6366f1"};
+const ALLERGENS = ["Egg","Peanut","Fish","Wheat","Tree Nuts","Soy","Sesame","Dairy","Shellfish","Molluscs"];
+const COLORS = {"Egg":"#f59e0b","Peanut":"#92400e","Fish":"#0ea5e9","Wheat":"#d97706","Tree Nuts":"#16a34a","Soy":"#7c3aed","Sesame":"#dc2626","Dairy":"#6366f1","Shellfish":"#db2777","Molluscs":"#0d9488"};
 const NUTR_COLORS = {"Iron":"#dc2626","Zinc":"#7c3aed","Omega-3":"#0ea5e9","Vitamin C":"#f59e0b","Protein":"#16a34a","Healthy Fats":"#0d9488","Calcium":"#6366f1","Fibre":"#92400e"};
 
 function NutrBadge({label}) {
@@ -81,14 +81,14 @@ const WEEKS = [
         }
       },
       {
-        day:"Thursday", meal:"Baked Chicken & Chickpea Tray with Roasted Tomatoes & Feta",
-        allergens:["Dairy","Egg"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
-        nutritionNotes:"Chickpeas = iron + zinc + fibre. Chicken = zinc + protein. Tomatoes = high vitamin C, dramatically boosts chickpea iron absorption. Feta = calcium.",
+        day:"Thursday", meal:"Sheet-Pan Garlic Prawns with Chickpeas, Roasted Tomatoes & Feta",
+        allergens:["Shellfish","Dairy"], nutrition:["Zinc","Iron","Vitamin C","Protein","Calcium","Fibre"],
+        nutritionNotes:"First shellfish introduction. Prawns = zinc + B12 + lean protein. Chickpeas = plant iron + zinc + fibre. Tomatoes = high vitamin C to boost chickpea iron. Feta = calcium. Shellfish is the only new allergen this meal, so any reaction is easy to pin down.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"45 min",
-          ingredients:["4 chicken thighs, bone-in skin-on","2 tins (400g) chickpeas, drained","600g cherry tomatoes","2 tbsp olive oil","1 tsp mild curry powder","½ tsp garlic powder","160g feta, crumbled","2 eggs, hard boiled"],
-          steps:["Preheat oven to 200°C. Mix chickpeas, tomatoes, olive oil, curry powder and garlic in a baking dish.","Nestle chicken on top skin-side up. Bake 40–45 mins until the thighs reach 75°C / 165°F at the bone and the skin is golden.","BABY: Squash each chickpea flat between fingers — removes skin and choking risk. Shred chicken finely removing skin. Spoon plenty of tomato juice over for vitamin C. Crumble feta on top. Grate hard boiled egg over for extra iron.","ADULTS: Serve from dish with feta crumbled on top."]
+          serves:"2 adults + baby — serves 2 nights", temp:"220°C / 425°F", time:"30 min",
+          ingredients:["400g raw prawns, peeled and deveined (tails off, no added salt)","2 tins (400g) chickpeas, drained","600g cherry tomatoes","4 cloves garlic, sliced","2 tbsp olive oil","160g feta, crumbled","½ tsp smoked paprika (adults only)","Juice of ½ lemon (adults only)"],
+          steps:["Preheat oven to 220°C. Toss chickpeas, tomatoes, garlic and olive oil in a baking dish. Roast 20 mins, until the tomatoes burst and the chickpeas are hot through.","Pat the prawns dry and scatter them over the tray. Roast a further 6–8 mins, until the prawns are pink, opaque and curled and reach 63°C / 145°F. Don't overcook or they go rubbery.","BABY: Reserve a few prawns and some chickpea-tomato mixture before the adults' lemon and paprika. Squash each chickpea flat. Remove any tail, shell or dark vein from the prawns, then finely mince the prawn meat and mash it through the chickpeas and soft tomato so there are no whole pieces — prawns are a top choking hazard. Stir in a little crumbled feta. Tomato vitamin C boosts the chickpea iron. First shellfish: offer a small amount early in the day and watch baby for any reaction.","ADULTS: Squeeze over lemon, dust with smoked paprika and extra feta. Serve as is or with flatbread."]
         }
       },
       {
@@ -107,12 +107,12 @@ const WEEKS = [
       {step:"1",title:"Grind nuts (Sunday)",detail:"Pulse walnuts and cashews to fine powder separately. Store in jars. Use as baby topping all week for zinc and healthy fats."},
       {step:"2",title:"Cook brown rice",detail:"Cook large batch. Cool completely. Bag into portions. Fridge or freeze."},
       {step:"3",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
-      {step:"4",title:"Drain and bag chickpeas",detail:"Drain, rinse and pat dry. Store in a ziplock bag ready for Thursday."},
+      {step:"4",title:"Drain chickpeas & thaw prawns (Thursday)",detail:"Drain, rinse and pat the chickpeas dry; bag ready for Thursday. If using frozen prawns, move them to the fridge to thaw overnight and keep cold — pat dry before they go in the oven."},
       {step:"5",title:"Cube butternut squash",detail:"Peel and cube 2cm. Store in ziplock bag in fridge."},
       {step:"6",title:"Cook quinoa",detail:"Cook in stock. Cool and bag into portions for Tuesday dinner and Wednesday leftover."}
     ],
-    textures:["Trout (Tuesday): similar to salmon — flake carefully and feel every piece for fine bones before serving.","Quinoa: tiny grains — mix well into mashed food so it doesn't sit loose.","Butternut squash: mash completely smooth after roasting.","Chickpeas: MUST be squashed flat between fingers — whole chickpeas are a choking hazard.","Nut crust (Sunday): grind walnuts and cashews to fine powder for baby — no visible chunks. Mix into rice as a topping rather than serving the crust directly.","Broccoli: roast or steam until completely fork-tender. Cut into pieces no larger than 1cm."],
-    allergenCoverage:{hit:["Fish","Sesame","Dairy","Egg","Tree Nuts","Soy"],skipped:["Peanut","Wheat"]}
+    textures:["Trout (Tuesday): similar to salmon — flake carefully and feel every piece for fine bones before serving.","Quinoa: tiny grains — mix well into mashed food so it doesn't sit loose.","Butternut squash: mash completely smooth after roasting.","Chickpeas: MUST be squashed flat between fingers — whole chickpeas are a choking hazard.","Prawns (Thursday): cook fully to opaque / 63°C / 145°F, remove tail, shell and vein, then finely mince and mash through the chickpeas — never serve whole or in rounds (top choking hazard). First shellfish: start with a small amount and watch for a reaction.","Nut crust (Sunday): grind walnuts and cashews to fine powder for baby — no visible chunks. Mix into rice as a topping rather than serving the crust directly.","Broccoli: roast or steam until completely fork-tender. Cut into pieces no larger than 1cm."],
+    allergenCoverage:{hit:["Fish","Sesame","Dairy","Egg","Tree Nuts","Soy","Shellfish"],skipped:["Peanut","Wheat","Molluscs"]}
   },
   {
     title:"Week 3", nutritionFocus:"Triple Iron Sources Per Meal",
@@ -138,7 +138,7 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
           ingredients:["800g lean beef mince","200g shiitake mushrooms, finely sliced","200g baby spinach, chopped","2 tins (400g) chopped tomatoes","2 tbsp low-sodium soy sauce","1 tbsp mirin","1 tsp ginger powder","½ tsp garlic powder","600g brown rice, cooked","1 tbsp sesame seeds, ground","2 tbsp cashews, finely ground (for baby topping)"],
-          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on the hob, drain excess fat.","Mix in shiitake, spinach, tomatoes, ginger and garlic. Reserve baby's portion now, before the soy sauce goes in.","Stir soy sauce and mirin into the adult portion. Transfer all to a baking dish. Bake 35 mins.","BABY: Take the reserved portion and mash lightly — mushrooms finely chopped, spinach soft. Serve over soft brown rice with a sprinkle of ground sesame and ground cashew. Tomato vitamin C boosts iron from beef and spinach.","ADULTS: Serve over brown rice."]
+          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on the hob, drain excess fat.","Mix in shiitake, spinach, tomatoes, ginger and garlic. Reserve baby's portion into a small ovenproof dish now, before the soy sauce goes in.","Stir soy sauce and mirin into the adult portion. Transfer the adult portion to a baking dish and place baby's small dish alongside. Bake both 35 mins, until the beef is piping hot and cooked through (71°C / 160°F — no pink).","BABY: Take baby's baked portion and mash lightly — mushrooms finely chopped, spinach soft. Confirm the mince is fully cooked through with no pink, then serve over soft brown rice with a sprinkle of ground sesame and ground cashew. Tomato vitamin C boosts iron from beef and spinach.","ADULTS: Serve over brown rice."]
         }
       },
       {
@@ -193,14 +193,14 @@ const WEEKS = [
         }
       },
       {
-        day:"Sunday", meal:"Baked Chicken & Sweet Potato Tray with Pea Puree",
-        allergens:["Egg","Dairy","Tree Nuts"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
-        nutritionNotes:"Chicken = zinc + protein. Sweet potato = vitamin A + vitamin C to boost iron absorption. Peas = iron + zinc + vitamin C. Egg and parmesan add calcium and extra iron. Ground almond adds healthy fats and zinc.",
+        day:"Sunday", meal:"Baked Scallops with Roasted Sweet Potato & Pea Purée",
+        allergens:["Molluscs","Egg","Dairy","Tree Nuts"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium"],
+        nutritionNotes:"First mollusc introduction. Scallops = lean protein + zinc + B12, with a mild flavour and soft texture babies take to. Sweet potato = vitamin A + vitamin C to boost iron. Peas = iron + zinc + vitamin C. Grated egg and parmesan add calcium and extra iron; ground almond adds healthy fats and zinc.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["4 chicken breasts","4 medium sweet potatoes, peeled and cubed 2cm","2 tbsp olive oil","1 tsp dried thyme","½ tsp garlic powder","400g frozen peas","100ml whole milk","60g butter","60g parmesan, grated","2 eggs, hard boiled (for baby iron boost)","2 tbsp almonds, finely ground (for baby topping)"],
-          steps:["Preheat oven to 200°C. Place chicken breasts in a baking dish. Arrange sweet potato cubes around them. Drizzle with olive oil, sprinkle garlic powder.","Cover with foil and bake 30 mins. Remove foil and bake a further 8 mins until chicken is golden.","Boil peas 3 mins. Blend with milk, butter and parmesan until smooth.","BABY: Shred chicken very finely. Mash sweet potato smooth. Serve alongside pea puree. Grate hard boiled egg over and sprinkle ground almond for extra iron and zinc. Both peas and sweet potato provide vitamin C.","ADULTS: Slice chicken, serve over sweet potato with pea puree. Season with salt and pepper."]
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"35 min",
+          ingredients:["16 scallops (roe removed), patted dry","4 medium sweet potatoes, peeled and cubed 2cm","2 tbsp olive oil","½ tsp garlic powder","400g frozen peas","100ml whole milk","60g butter","60g parmesan, grated","2 eggs, hard boiled (for baby iron boost)","2 tbsp almonds, finely ground (for baby topping)","Juice of ½ lemon (adults only)"],
+          steps:["Preheat oven to 200°C. Toss sweet potato cubes in olive oil and garlic powder. Roast 22–25 mins until soft and caramelised at the edges.","Push the sweet potato to the sides. Add the scallops to the centre of the tray and bake a further 8–10 mins, until firm and opaque all the way through (63°C / 145°F). Don't overbake or they toughen.","Boil peas 3 mins. Blend with milk, butter and parmesan until smooth.","BABY: Take 2–3 plain scallops before any lemon. Check they're opaque right through, then finely mince or mash them into the soft sweet potato so there are no whole pieces — scallops are chewy and a choking risk otherwise. Serve alongside pea purée. Grate hard boiled egg over and sprinkle ground almond. Peas and sweet potato provide vitamin C. First mollusc: offer a small amount early in the day and watch baby for any reaction.","ADULTS: Squeeze lemon over the scallops and serve over sweet potato with pea purée."]
         }
       }
     ],
@@ -208,12 +208,12 @@ const WEEKS = [
       {step:"1",title:"Make miso glaze (Tuesday)",detail:"Mix white miso, mirin and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — remember to reserve one plain fillet for baby first."},
       {step:"2",title:"Slice carrots & defrost edamame (Tuesday)",detail:"Slice carrots into coins, bag in fridge. Move edamame from freezer to fridge Monday evening."},
       {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta."},
-      {step:"4",title:"Cube sweet potatoes (Sunday)",detail:"Peel and cube into 2cm pieces. Store in a ziplock bag in the fridge for Sunday's chicken tray."},
+      {step:"4",title:"Cube sweet potatoes & thaw scallops (Sunday)",detail:"Peel and cube sweet potato into 2cm pieces; bag in the fridge for Sunday's scallop tray. If using frozen scallops, thaw overnight in the fridge, keep cold, and pat dry before roasting."},
       {step:"5",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
       {step:"6",title:"Grind almonds for topping",detail:"Pulse a small amount of almonds to fine crumbs. Store in a jar. Use as baby topping on Sunday for zinc and healthy fats."}
     ],
-    textures:["Miso salmon (Tuesday): flake the plain baby fillet very finely, run fingertips through to feel for pin bones every time.","Edamame: ALWAYS press flat between fingers — never serve whole.","Polenta: naturally soft and smooth — ideal for baby. Mash the beef ragout lightly, ensure courgette is very soft.","Carrots: must be roasted until completely soft. Mash for baby.","Pea puree (Sunday): blend until very smooth. Pass through a sieve if any skins remain.","Ground almond (Sunday): fine powder only for baby — no visible nut pieces. Sprinkle as a topping."],
-    allergenCoverage:{hit:["Fish","Soy","Sesame","Dairy","Egg","Tree Nuts"],skipped:["Peanut","Wheat"]}
+    textures:["Miso salmon (Tuesday): flake the plain baby fillet very finely, run fingertips through to feel for pin bones every time.","Edamame: ALWAYS press flat between fingers — never serve whole.","Polenta: naturally soft and smooth — ideal for baby. Mash the beef ragout lightly, ensure courgette is very soft.","Carrots: must be roasted until completely soft. Mash for baby.","Scallops (Sunday): cook until firm and opaque right through (63°C / 145°F) but no further, or they toughen. Finely mince or mash into the sweet potato — never serve whole. First mollusc: start with a small amount and watch for a reaction.","Pea puree (Sunday): blend until very smooth. Pass through a sieve if any skins remain.","Ground almond (Sunday): fine powder only for baby — no visible nut pieces. Sprinkle as a topping."],
+    allergenCoverage:{hit:["Fish","Soy","Sesame","Dairy","Egg","Tree Nuts","Molluscs"],skipped:["Peanut","Wheat","Shellfish"]}
   },
   {
     title:"Week 5", nutritionFocus:"Gut Health, Fibre & Immune Boost",
@@ -240,7 +240,7 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"40 min",
           ingredients:["8 bone-in skin-on chicken thighs","4 tbsp low-sodium soy sauce","2 tbsp mirin","1 tsp ginger powder","½ tsp garlic powder","400g broccoli florets","200g sugar snap peas","2 tbsp olive oil","1 tsp sesame seeds, ground (for baby)"],
-          steps:["Mix soy, mirin, ginger and garlic into a teriyaki sauce. Reserve one plain thigh and a little plain sauce for baby before glazing.","Preheat oven to 200°C. Coat adult thighs in sauce, place skin-up on a lined tray. Bake 25 mins.","Toss broccoli and snap peas in olive oil, add to the tray. Bake 15 more mins.","BABY: Shred the reserved plain thigh very finely — remove skin and bone. Cut broccoli and snap peas into tiny soft pieces. Sprinkle ground sesame. A tiny brush of teriyaki only. Broccoli vitamin C boosts chicken iron.","ADULTS: Serve thighs with veg, spoon over pan juices."],
+          steps:["Mix soy, mirin, ginger and garlic into a teriyaki sauce. Reserve one plain thigh and a little plain sauce for baby before glazing.","Preheat oven to 200°C. Coat adult thighs in sauce and place skin-up on a lined tray; add the reserved plain thigh to the same tray, unglazed. Bake 25 mins.","Toss broccoli and snap peas in olive oil, add to the tray. Bake 15 more mins, until the thighs reach 75°C / 165°F at the bone.","BABY: Shred the reserved plain thigh very finely — remove skin and bone. Cut broccoli and snap peas into tiny soft pieces. Sprinkle ground sesame. A tiny brush of teriyaki only. Broccoli vitamin C boosts chicken iron.","ADULTS: Serve thighs with veg, spoon over pan juices."],
           attribution:"Adapted from \"Teriyaki Chicken\" method, Just One Cookbook"
         }
       },
@@ -285,15 +285,14 @@ const WEEKS = [
         }
       },
       {
-        day:"Thursday", meal:"One-Pan Orzo with Spinach, Feta & Cannellini Beans",
-        allergens:["Wheat","Dairy"], nutrition:["Iron","Calcium","Vitamin C","Protein","Fibre"],
-        nutritionNotes:"Cannellini beans = plant iron + protein + fibre (added to the classic for staying power). Spinach = iron. Peas and lemon = vitamin C to boost absorption. Feta adds calcium. Adapted from Melissa Clark's one-pan orzo with beans added for iron and protein.",
+        day:"Thursday", meal:"One-Pan Orzo with Prawns, Scallops, Spinach & Peas",
+        allergens:["Wheat","Shellfish","Molluscs","Dairy"], nutrition:["Iron","Zinc","Vitamin C","Protein","Calcium","Fibre"],
+        nutritionNotes:"Final-week showcase: prawns (Week 2) and scallops (Week 4) have each been introduced on their own, so by now combining them is safe. Prawns + scallops = zinc + B12 + lean protein. Spinach = iron. Peas and lemon = vitamin C to boost absorption. Feta adds calcium. Inspired by Melissa Clark's one-pan orzo, made into a seafood version.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
-          ingredients:["300g orzo","4 large scallions, sliced","2 large garlic cloves, minced","250g baby spinach, chopped","2 tins (400g) cannellini beans, drained","700ml low-sodium veg stock","1 tsp lemon zest","160g feta, crumbled","1 cup chopped fresh dill","2 tbsp olive oil","400g frozen peas"],
-          steps:["Preheat oven to 200°C. In an oven dish, mix orzo, scallions, garlic, spinach, beans, stock, lemon zest and olive oil.","Cover with foil. Bake 20 mins. Stir, add peas, bake 8 more mins until orzo is tender.","Stir through most of the feta and dill. Reserve baby's portion before adding the final feta.","BABY: Mash the beans (never whole — choking risk). Orzo and spinach should be very soft. Use only a small amount of feta (sodium). Spinach and peas provide vitamin C to boost bean iron.","ADULTS: Top with remaining feta and dill."],
-          attribution:"Adapted from \"One-Pan Orzo With Spinach and Feta\" by Melissa Clark, NYT Cooking"
+          serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"35 min",
+          ingredients:["300g orzo","4 large scallions, sliced","2 large garlic cloves, minced","250g baby spinach, chopped","700ml low-sodium veg stock","1 tsp lemon zest","250g raw prawns, peeled and deveined (tails off)","12 scallops (roe removed), halved","160g feta, crumbled","1 cup chopped fresh dill","2 tbsp olive oil","400g frozen peas"],
+          steps:["Preheat oven to 200°C. In an oven dish, mix orzo, scallions, garlic, spinach, stock, lemon zest and olive oil.","Cover with foil. Bake 20 mins. Stir, add peas and bake 5 more mins until the orzo is nearly tender — add a splash more stock if it looks dry.","Pat the prawns and scallops dry and stir them through the hot orzo. Re-cover and bake a final 6–8 mins, until the prawns are pink and opaque and the scallops are firm and opaque (63°C / 145°F). Don't overcook.","Stir through most of the feta and dill. Reserve baby's portion before the final feta.","BABY: Make sure the prawns and scallops are fully opaque and cooked through. Remove any prawn tail, shell or vein, then finely mince both the prawn and scallop pieces and stir them through the soft orzo so there are no whole pieces. Orzo and spinach should be very soft. Use only a small amount of feta (sodium). Spinach and peas provide vitamin C.","ADULTS: Top with remaining feta and dill, and a squeeze of lemon."]
         }
       },
       {
@@ -304,7 +303,7 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
           ingredients:["800g lean beef mince","200g baby spinach, chopped","2 tins (400g) kidney beans, drained","4 red peppers, sliced","2 tins (400g) chopped tomatoes","1 tsp smoked paprika","1 tsp dried oregano","½ tsp garlic powder","3 eggs, beaten","100g cheddar, grated"],
-          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on hob. Drain fat.","Add spinach, kidney beans, tomatoes and garlic. Stir. Transfer to a large baking dish. Reserve baby's portion now, before the paprika.","Lay red pepper slices over the top. Pour beaten eggs over. Scatter cheddar over. Stir paprika into the adult portion. Bake 35 mins until set and golden on top.","BABY: Scoop the reserved portion ensuring all three iron sources are included. Mash kidney beans. Break up any egg chunks. The red pepper = high vitamin C to boost beef, spinach and kidney bean iron simultaneously.","ADULTS: Serve from dish with crusty bread."]
+          steps:["Preheat oven to 190°C. Brown beef mince 3 mins on hob. Drain fat.","Add spinach, kidney beans, tomatoes and garlic. Stir. Reserve baby's portion into a small ovenproof dish now, before the paprika.","Transfer the adult portion to a large baking dish. Lay red pepper slices over both dishes. Pour most of the beaten egg over the adult dish and a spoonful over baby's. Scatter cheddar over the adult dish (keep baby's plain or use a tiny amount for lower sodium). Stir paprika into the adult portion only. Bake both 35 mins, until set and the beef is cooked through (71°C / 160°F — no pink).","BABY: Scoop baby's baked portion, ensuring all three iron sources are included and the mince is fully cooked through with no pink. Mash kidney beans. Break up any set egg. The red pepper = high vitamin C to boost beef, spinach and kidney bean iron simultaneously.","ADULTS: Serve from dish with crusty bread."]
         }
       }
     ],
@@ -312,12 +311,12 @@ const WEEKS = [
       {step:"1",title:"Make teriyaki glaze (Tuesday)",detail:"Mix soy, mirin, ginger and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — reserve one plain fillet for baby first."},
       {step:"2",title:"Defrost edamame (Tuesday)",detail:"Move edamame from freezer to fridge Monday evening so it's ready for Tuesday's salmon tray."},
       {step:"3",title:"Chop orzo veg (Thursday)",detail:"Slice scallions, mince garlic, chop spinach. Bag together in the fridge. Thursday everything goes into one dish with the orzo and stock."},
-      {step:"4",title:"Drain & bag cannellini beans (Thursday)",detail:"Drain and rinse cannellini beans. Bag in fridge. Lightly mash baby's portion when serving."},
+      {step:"4",title:"Thaw prawns & scallops (Thursday)",detail:"If frozen, move prawns and scallops to the fridge to thaw overnight; keep cold and pat dry before they go in the oven Thursday. They cook fast, so they stir into the orzo near the end."},
       {step:"5",title:"Brown beef mince (Sunday)",detail:"Brown 3 mins, drain fat, cool and store. Sunday just layer into baking dish with spinach, kidney beans, tomatoes and eggs — reserve baby's portion before the paprika."},
       {step:"6",title:"Drain & bag kidney beans (Sunday)",detail:"Drain and rinse kidney beans. Bag separately in the fridge until Sunday."}
     ],
-    textures:["Teriyaki salmon (Tuesday): flake the plain baby fillet very finely. Feel for pin bones every single time.","Pak choi: steam until leaves are completely wilted and stalk is fork-tender. Cut stalk into very small pieces.","Edamame: ALWAYS press flat — never whole.","Orzo (Thursday): cook until very soft. Small grain shape is easy for baby once tender.","Cannellini beans: MUST be mashed before serving — whole beans are a choking hazard.","Beef bake (Sunday): mash kidney beans throughout. Break up any egg that has set in chunks. Red pepper should be very soft — peel if skin is still firm."],
-    allergenCoverage:{hit:["Wheat","Egg","Dairy","Fish","Sesame","Soy"],skipped:["Peanut","Tree Nuts"]}
+    textures:["Teriyaki salmon (Tuesday): flake the plain baby fillet very finely. Feel for pin bones every single time.","Pak choi: steam until leaves are completely wilted and stalk is fork-tender. Cut stalk into very small pieces.","Edamame: ALWAYS press flat — never whole.","Orzo (Thursday): cook until very soft. Small grain shape is easy for baby once tender.","Prawns & scallops (Thursday): cook fully to opaque / 63°C / 145°F but no further (they toughen). Remove any prawn tail, shell or vein, then finely mince both and stir through the soft orzo — never serve whole.","Beef bake (Sunday): mash kidney beans throughout. Break up any egg that has set in chunks. Red pepper should be very soft — peel if skin is still firm."],
+    allergenCoverage:{hit:["Wheat","Egg","Dairy","Fish","Sesame","Soy","Shellfish","Molluscs"],skipped:["Peanut","Tree Nuts"]}
   }
 ];
 
@@ -377,7 +376,7 @@ const GROCERY_LISTS = [
   ]},
   { week: 2, categories: [
     { name: "🥦 Fresh Veg", items: ["1 large butternut squash","600g cherry tomatoes","400g broccoli florets"] },
-    { name: "🥩 Meat & Fish", items: ["4 trout fillets","4 chicken thighs (bone-in skin-on)","4 chicken breasts (for Sunday)"] },
+    { name: "🥩 Meat & Fish", items: ["4 trout fillets","400g raw prawns (peeled, deveined, no added salt)","4 chicken breasts (for Sunday)"] },
     { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","6 eggs","Full-fat plain yoghurt"] },
     { name: "🌾 Grains & Pasta", items: ["400g quinoa","Brown rice (large bag — large batch needed)"] },
     { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chickpeas (400g each)","4 tbsp tahini"] },
@@ -395,7 +394,7 @@ const GROCERY_LISTS = [
   ]},
   { week: 4, categories: [
     { name: "🥦 Fresh Veg", items: ["8 large carrots","4 courgettes","1 small onion","4 medium sweet potatoes","400g frozen peas","400g frozen edamame"] },
-    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","4 chicken breasts"] },
+    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","16 scallops (roe removed)"] },
     { name: "🧀 Dairy & Eggs", items: ["Parmesan (80g)","60g butter","6 eggs","100ml whole milk"] },
     { name: "🌾 Grains & Pasta", items: ["500g cooked polenta (or polenta to cook)"] },
     { name: "🥫 Tins & Jars", items: ["4 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
@@ -413,10 +412,10 @@ const GROCERY_LISTS = [
   ]},
   { week: 6, categories: [
     { name: "🥦 Fresh Veg", items: ["4 heads pak choi","400g frozen edamame","4 scallions","250g baby spinach","200g baby spinach (Sunday bake)","4 red peppers","400g frozen peas","Fresh dill","1 lemon"] },
-    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince"] },
+    { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","250g raw prawns (peeled, deveined)","12 scallops (roe removed)"] },
     { name: "🧀 Dairy & Eggs", items: ["160g feta","100g cheddar","3 eggs"] },
     { name: "🌾 Grains & Pasta", items: ["300g orzo"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins cannellini beans (400g each)","2 tins kidney beans (400g each)","2 tins chopped tomatoes (400g each)","Low-sodium veg stock (700ml)"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins kidney beans (400g each)","2 tins chopped tomatoes (400g each)","Low-sodium veg stock (700ml)"] },
     { name: "🥜 Nuts & Seeds", items: ["Ground sesame seeds"] },
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Smoked paprika","Dried oregano","Ginger powder"] },
   ]},
@@ -605,7 +604,7 @@ export default function App() {
           {/* ALLERGENS TAB */}
           {section==="allergens" && (
             <div>
-              <p style={{fontSize:"12px",color:"#6b7280",margin:"0 0 12px"}}>Target: cover at least 6 of 8 allergen groups every week.</p>
+              <p style={{fontSize:"12px",color:"#6b7280",margin:"0 0 12px"}}>Target: cover at least 6 of 10 allergen groups every week. Shellfish &amp; molluscs appear every other week (Weeks 2, 4 &amp; 6) by design, each introduced on its own first.</p>
               <div style={{display:"flex",flexWrap:"wrap",gap:"8px",marginBottom:"14px"}}>
                 {ALLERGENS.map(a=>{
                   const hit=week.allergenCoverage.hit.includes(a);
@@ -622,7 +621,7 @@ export default function App() {
                 })}
               </div>
               <div style={{background:"#f0fdf4",borderRadius:"10px",padding:"10px 14px",border:"1px solid #bbf7d0"}}>
-                <span style={{fontSize:"12px",fontWeight:700,color:"#166534"}}>{week.allergenCoverage.hit.length}/8 allergen groups covered this week ✅</span>
+                <span style={{fontSize:"12px",fontWeight:700,color:"#166534"}}>{week.allergenCoverage.hit.length}/10 allergen groups covered this week ✅</span>
               </div>
             </div>
           )}

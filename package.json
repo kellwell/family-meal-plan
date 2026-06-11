@@ -1,18 +1,22 @@
 {
   "name": "family-meal-plan",
-  "version": "1.0.0",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "6-week nutritionally optimised, oven-first, baby-friendly family meal plan",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.1.0"
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.2.0",
+    "vite": "^5.4.10"
   }
 }

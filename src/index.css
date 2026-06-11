@@ -1,0 +1,15 @@
+/* The app (App.jsx) supplies its own full-height background, font and layout
+   via inline styles. We only need to clear the browser defaults here so the
+   green header and background bleed to the window edges. */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0fdf4;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
