@@ -100,7 +100,7 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"30 min",
           ingredients:["4 chicken breasts","100g walnuts, finely ground","100g cashews, finely ground","2 eggs, beaten (for coating)","2 tbsp sesame oil","2 tbsp low-sodium soy sauce","1 tsp dried rosemary, finely chopped","400g broccoli florets","600g brown rice, cooked","2 tbsp olive oil"],
-          steps:["Preheat oven to 200°C. Mix ground nuts with soy sauce and sesame oil into a paste.","Dip chicken breasts in beaten egg then press nut crust firmly on top.","Place on a lined tray with broccoli tossed in olive oil around the chicken.","Bake 28–30 mins until chicken is cooked through (75°C / 165°F) and crust is golden. If the crust browns too fast, tent loosely with foil for the last 10 mins.","BABY: Reserve a small piece of uncrusted chicken — bake plain alongside. Shred very finely. For the crust, ensure nuts are ground to fine powder — mix a small amount into baby's rice as a topping. Cut broccoli into tiny soft pieces. Vitamin C in broccoli boosts iron from chicken and rice.","ADULTS: Slice chicken and serve over brown rice with broccoli."]
+          steps:["Preheat oven to 200°C. Mix ground nuts with soy sauce, sesame oil and rosemary into a paste.","Dip chicken breasts in beaten egg then press nut crust firmly on top.","Place on a lined tray with broccoli tossed in olive oil around the chicken.","Bake 28–30 mins until chicken is cooked through (75°C / 165°F) and crust is golden. If the crust browns too fast, tent loosely with foil for the last 10 mins.","BABY: Reserve a small piece of uncrusted chicken — bake plain alongside. Shred very finely. For the crust, ensure nuts are ground to fine powder — mix a small amount into baby's rice as a topping. Cut broccoli into tiny soft pieces. Vitamin C in broccoli boosts iron from chicken and rice.","ADULTS: Slice chicken and serve over brown rice with broccoli."]
         }
       }
     ],
@@ -209,8 +209,8 @@ const WEEKS = [
       {step:"1",title:"Make miso glaze (Tuesday)",detail:"Mix white miso, mirin and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — remember to reserve one plain fillet for baby first."},
       {step:"2",title:"Slice carrots & defrost edamame (Tuesday)",detail:"Slice carrots into coins, bag in fridge. Move edamame from freezer to fridge Monday evening."},
       {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta."},
-      {step:"4",title:"Cube sweet potatoes & thaw scallops (Sunday)",detail:"Peel and cube sweet potato into 2cm pieces; bag in the fridge for Sunday's scallop tray. If using frozen scallops, thaw overnight in the fridge, keep cold, and pat dry before roasting."},
-      {step:"5",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
+      {step:"4",title:"Hard boil 2 eggs (Sunday)",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby's scallop portion on Sunday for extra iron."},
+      {step:"5",title:"Cube sweet potatoes & thaw scallops (Sunday)",detail:"Peel and cube sweet potato into 2cm pieces; bag in the fridge for Sunday's scallop tray. If using frozen scallops, thaw overnight in the fridge, keep cold, and pat dry before roasting."},
       {step:"6",title:"Grind almonds for topping",detail:"Pulse a small amount of almonds to fine crumbs. Store in a jar. Use as baby topping on Sunday for zinc and healthy fats."}
     ],
     textures:["Miso salmon (Tuesday): flake the plain baby fillet very finely, run fingertips through to feel for pin bones every time.","Edamame: ALWAYS press flat between fingers — never serve whole.","Polenta: naturally soft and smooth — ideal for baby. Mash the beef ragout lightly, ensure courgette is very soft.","Carrots: must be roasted until completely soft. Mash for baby.","Scallops (Sunday): cook until firm and opaque right through (63°C / 145°F) but no further, or they toughen. Finely mince or mash into the sweet potato — never serve whole. First mollusc: start with a small amount and watch for a reaction.","Pea puree (Sunday): blend until very smooth. Pass through a sieve if any skins remain.","Ground almond (Sunday): fine powder only for baby — no visible nut pieces. Sprinkle as a topping."],
@@ -253,7 +253,7 @@ const WEEKS = [
         recipe:{
           serves:"2 adults + baby — serves 2 nights", temp:"200°C / 400°F", time:"25 min",
           ingredients:["4 chicken breasts","160g almonds, very finely ground","2 eggs, beaten (for coating)","60g parmesan, grated (mixed into crust)","1 tsp dried tarragon","400g asparagus, woody ends removed","2 tbsp olive oil","600g brown rice, cooked"],
-          steps:["Preheat oven to 200°C. Mix ground almonds and parmesan together.","Dip chicken breasts in beaten egg then press almond crust firmly on top.","Toss asparagus in olive oil. Arrange on tray around chicken.","Bake 28–30 mins until crust is golden and chicken is cooked through.","BABY: Reserve a small uncrusted chicken piece — bake plain alongside. Shred very finely. For the crust, mix a small amount of finely ground almond into baby's rice as a topping. Cut asparagus into 1cm pieces after roasting. Asparagus = vitamin C + iron + folate. Serve over soft brown rice.","ADULTS: Slice chicken and serve over brown rice with asparagus."]
+          steps:["Preheat oven to 200°C. Mix ground almonds, parmesan and tarragon together.","Dip chicken breasts in beaten egg then press almond crust firmly on top.","Toss asparagus in olive oil. Arrange on tray around chicken.","Bake 28–30 mins until crust is golden and chicken is cooked through.","BABY: Reserve a small uncrusted chicken piece — bake plain alongside. Shred very finely. For the crust, mix a small amount of finely ground almond into baby's rice as a topping. Cut asparagus into 1cm pieces after roasting. Asparagus = vitamin C + iron + folate. Serve over soft brown rice.","ADULTS: Slice chicken and serve over brown rice with asparagus."]
         }
       }
     ],
@@ -394,13 +394,13 @@ const GROCERY_LISTS = [
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
   ]},
   { week: 4, categories: [
-    { name: "🥦 Fresh Veg", items: ["8 large carrots","4 courgettes","1 small onion","4 medium sweet potatoes","400g frozen peas","400g frozen edamame"] },
+    { name: "🥦 Fresh Veg", items: ["8 large carrots","4 courgettes","1 small onion","4 medium sweet potatoes","400g frozen peas","400g frozen edamame","1 lemon"] },
     { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","16 scallops (roe removed)"] },
     { name: "🧀 Dairy & Eggs", items: ["Parmesan (80g)","60g butter","6 eggs","100ml whole milk"] },
     { name: "🌾 Grains & Pasta", items: ["500g cooked polenta (or polenta to cook)"] },
     { name: "🥫 Tins & Jars", items: ["4 tins chopped tomatoes (400g each)","White miso paste (low sodium)"] },
     { name: "🥜 Nuts & Seeds", items: ["Almonds (to grind, small amount)","Ground sesame seeds"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Sesame oil","Mirin","Garlic powder","Dried thyme","Dried oregano","Dried basil","Fresh mint","Ginger powder"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Sesame oil","Mirin","Garlic powder","Dried thyme","Dried oregano","Dried basil","Dried tarragon","Fresh mint","Ginger powder"] },
   ]},
   { week: 5, categories: [
     { name: "🥦 Fresh Veg", items: ["4 medium sweet potatoes","400g frozen edamame","400g broccoli florets","200g sugar snap peas","400g asparagus"] },
