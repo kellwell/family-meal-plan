@@ -47,7 +47,8 @@ const WEEKS = [
     ],
     prepChecklist:[
       {step:"1",title:"Form meatballs (Thursday)",detail:"Mix beef, spinach, egg, breadcrumbs and garlic. Roll into 18 balls. Store on a covered plate in the fridge — goes straight into baking dish Thursday."},
-      {step:"2",title:"Make peanut sauce (Sunday)",detail:"Whisk peanut butter, soy sauce, sesame oil and stock. Store in a jar in the fridge."},
+      {step:"2",title:"Freeze chicken (Sunday)",detail:"Put the 4 chicken breasts straight in the freezer on Monday. Move to the fridge on Friday evening to thaw slowly overnight. Raw chicken bought Monday won't be safe to cook on Sunday otherwise."},
+      {step:"3",title:"Make peanut sauce (Saturday)",detail:"Whisk peanut butter, soy sauce, sesame oil and stock. Store in a jar in the fridge — make this Saturday once the chicken has thawed, then pour over the chicken to marinate overnight before Sunday."},
       {step:"3",title:"Cube sweet potatoes",detail:"Peel and cube into 2cm pieces. Store in a ziplock bag in the fridge."},
       {step:"4",title:"Slice red peppers",detail:"Deseed and slice. Store in a ziplock bag — keeps until Tuesday."},
       {step:"5",title:"Cook and bag pasta",detail:"Cook large batch. Cool, toss in olive oil. Bag into portions. Fridge or freeze."},
@@ -96,12 +97,12 @@ const WEEKS = [
       }
     ],
     prepChecklist:[
-      {step:"1",title:"Grind nuts (Sunday)",detail:"Pulse walnuts and cashews to fine powder separately. Store in jars. Use as baby topping all week for zinc and healthy fats."},
-      {step:"2",title:"Cook brown rice",detail:"Cook large batch. Cool completely. Bag into portions. Fridge or freeze."},
-      {step:"3",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
-      {step:"4",title:"Drain chickpeas & thaw prawns (Thursday)",detail:"Drain, rinse and pat the chickpeas dry; bag ready for Thursday. If using frozen prawns, move them to the fridge to thaw overnight and keep cold — pat dry before they go in the oven."},
-      {step:"5",title:"Cube butternut squash",detail:"Peel and cube 2cm. Store in ziplock bag in fridge."},
-      {step:"6",title:"Cook quinoa",detail:"Cook in stock. Cool and bag into portions for Tuesday dinner and Wednesday leftover."}
+      {step:"1",title:"Freeze chicken (Sunday)",detail:"Put the 4 chicken breasts straight in the freezer on Monday. Move to the fridge on Friday evening to thaw overnight — safe to use Sunday."},
+      {step:"2",title:"Grind nuts (Sunday)",detail:"Pulse walnuts and cashews to fine powder separately. Store in jars. Use as baby topping all week for zinc and healthy fats."},
+      {step:"3",title:"Cook brown rice",detail:"Cook large batch. Cool completely. Bag into portions. Fridge or freeze."},
+      {step:"4",title:"Hard boil 3 eggs",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby meals all week as an easy iron boost."},
+      {step:"5",title:"Drain chickpeas & thaw prawns (Thursday)",detail:"Drain, rinse and pat the chickpeas dry; bag ready for Thursday. If using frozen prawns, move them to the fridge to thaw overnight and keep cold — pat dry before they go in the oven."},
+      {step:"6",title:"Cube butternut squash & cook quinoa",detail:"Peel and cube squash 2cm, store in ziplock bag. Cook quinoa in stock, cool and bag into portions for Tuesday."}
     ],
     textures:["Trout (Tuesday): similar to salmon — flake carefully and feel every piece for fine bones before serving.","Quinoa: tiny grains — mix well into mashed food so it doesn't sit loose.","Butternut squash: mash completely smooth after roasting.","Chickpeas: MUST be squashed flat between fingers — whole chickpeas are a choking hazard.","Prawns (Thursday): cook fully to opaque / 63°C / 145°F, remove tail, shell and vein, then finely mince and mash through the chickpeas — never serve whole or in rounds (top choking hazard). First shellfish: start with a small amount and watch for a reaction.","Nut crust (Sunday): grind walnuts and cashews to fine powder for baby — no visible chunks. Mix into rice as a topping rather than serving the crust directly.","Broccoli: roast or steam until completely fork-tender. Cut into pieces no larger than 1cm."],
     allergenCoverage:{hit:["Fish","Sesame","Dairy","Egg","Tree Nuts","Soy","Shellfish"],skipped:["Peanut","Wheat","Molluscs"]}
@@ -147,7 +148,8 @@ const WEEKS = [
     ],
     prepChecklist:[
       {step:"1",title:"Brown lamb mince (Tuesday)",detail:"Brown lamb 3 mins on hob. Cool and store in fridge. On Tuesday just tip into baking dish with lentils and tomatoes — saves the hob step on a weeknight."},
-      {step:"2",title:"Marinate chicken (Sunday)",detail:"Make teriyaki sauce, reserve baby portion, coat chicken. Store in sealed bag in fridge — goes straight in oven Sunday."},
+      {step:"2",title:"Freeze chicken (Sunday)",detail:"Put the 4 chicken breasts straight in the freezer on Monday. Move to the fridge on Friday evening to thaw overnight."},
+      {step:"3",title:"Marinate chicken (Saturday)",detail:"Make teriyaki sauce Saturday once the chicken has thawed — reserve baby portion before adding maple syrup, then coat chicken in adult sauce. Store in a sealed bag in the fridge overnight. Goes straight in oven Sunday."},
       {step:"3",title:"Defrost edamame",detail:"Move from freezer to fridge Monday evening so it's ready for Sunday."},
       {step:"4",title:"Cook soba noodles",detail:"Cook, rinse in cold water, toss in tiny bit of sesame oil. Bag in portions. Cut baby portion into 2cm pieces before bagging."},
       {step:"5",title:"Pre-grind sesame & cashew",detail:"Grind sesame seeds and a small amount of cashew to fine powder. Store in small jars. Sprinkle over baby's meals all week for calcium, zinc and healthy fats."},
@@ -201,7 +203,7 @@ const WEEKS = [
       {step:"2",title:"Slice carrots & defrost edamame (Tuesday)",detail:"Slice carrots into coins, bag in fridge. Move edamame from freezer to fridge Monday evening."},
       {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta."},
       {step:"4",title:"Hard boil 2 eggs (Sunday)",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby's scallop portion on Sunday for extra iron."},
-      {step:"5",title:"Cube sweet potatoes & thaw scallops (Sunday)",detail:"Peel and cube sweet potato into 2cm pieces; bag in the fridge for Sunday's scallop tray. If using frozen scallops, thaw overnight in the fridge, keep cold, and pat dry before roasting."},
+      {step:"5",title:"Freeze or fridge scallops (Sunday)",detail:"If buying fresh scallops on Monday, freeze them immediately and move to the fridge Friday evening to thaw overnight. If buying frozen, keep in freezer and move to fridge Friday. Pat dry before roasting Sunday."},
       {step:"6",title:"Grind almonds for topping",detail:"Pulse a small amount of almonds to fine crumbs. Store in a jar. Use as baby topping on Sunday for zinc and healthy fats."}
     ],
     textures:["Miso salmon (Tuesday): flake the plain baby fillet very finely, run fingertips through to feel for pin bones every time.","Edamame: ALWAYS press flat between fingers — never serve whole.","Polenta: naturally soft and smooth — ideal for baby. Mash the beef ragout lightly, ensure courgette is very soft.","Carrots: must be roasted until completely soft. Mash for baby.","Scallops (Sunday): cook until firm and opaque right through (63°C / 145°F) but no further, or they toughen. Finely mince or mash into the sweet potato — never serve whole. First mollusc: start with a small amount and watch for a reaction.","Pea puree (Sunday): blend until very smooth. Pass through a sieve if any skins remain.","Ground almond (Sunday): fine powder only for baby — no visible nut pieces. Sprinkle as a topping."],
@@ -250,10 +252,10 @@ const WEEKS = [
     ],
     prepChecklist:[
       {step:"1",title:"Make miso butter (Tuesday)",detail:"Mash white miso, softened butter, mirin and ginger into a paste. Store in fridge. On Tuesday spread over adult cod — reserve one plain fillet for baby first."},
-      {step:"2",title:"Cube sweet potatoes & defrost edamame (Tuesday)",detail:"Peel and cube sweet potato 2cm, bag in fridge. Move edamame from freezer to fridge Monday evening."},
-      {step:"3",title:"Make teriyaki sauce (Thursday)",detail:"Mix soy, mirin, ginger and garlic. Reserve a little plain sauce and plan one plain thigh for baby. Store sauce in a jar — coat adult thighs Thursday."},
-      {step:"4",title:"Grind almonds (Sunday)",detail:"Pulse almonds to very fine crumbs, mix with parmesan. Store in a jar. On Sunday just dip chicken in egg and press crust on."},
-      {step:"5",title:"Cook brown rice",detail:"Cook large batch. Cool. Bag into portions for Sunday and leftovers."},
+      {step:"2",title:"Freeze chicken (Sunday)",detail:"Put the 4 chicken breasts straight in the freezer on Monday. Move to the fridge on Friday evening to thaw overnight — safe to use Sunday."},
+      {step:"3",title:"Cube sweet potatoes & defrost edamame (Tuesday)",detail:"Peel and cube sweet potato 2cm, bag in fridge. Move edamame from freezer to fridge Monday evening."},
+      {step:"4",title:"Make teriyaki sauce (Thursday)",detail:"Mix soy, mirin, ginger and garlic. Reserve a little plain sauce and plan one plain thigh for baby. Store sauce in a jar — coat adult thighs Thursday."},
+      {step:"5",title:"Grind almonds (Sunday)",detail:"Pulse almonds to very fine crumbs, mix with parmesan. Store in a jar. On Sunday just dip chicken in egg and press crust on."},
       {step:"6",title:"Cut broccoli & snap peas (Thursday)",detail:"Cut broccoli into florets and trim snap peas. Bag in fridge ready for Thursday's tray."}
     ],
     textures:["Cod (Tuesday): flake very finely and feel for bones with fingertips before every serve.","Edamame: ALWAYS press flat — never whole.","Teriyaki chicken thighs (Thursday): shred the plain baby thigh very finely, remove all skin and bone. Cut broccoli and snap peas into tiny soft pieces.","Snap peas: must be very soft and finely chopped — fibrous strings are a choking risk if undercooked.","Almond crust (Sunday): must be ground to fine powder for baby — no visible nut pieces. Mix into rice as a topping rather than giving baby the crusted chicken directly.","Brown rice: add a splash of water when reheating to keep it moist and easy for baby to gum."],
@@ -304,7 +306,7 @@ const WEEKS = [
       {step:"2",title:"Defrost edamame (Tuesday)",detail:"Move edamame from freezer to fridge Monday evening so it's ready for Tuesday's salmon tray."},
       {step:"3",title:"Chop orzo veg (Thursday)",detail:"Slice scallions, mince garlic, chop spinach. Bag together in the fridge. Thursday everything goes into one dish with the orzo and stock."},
       {step:"4",title:"Thaw prawns & scallops (Thursday)",detail:"If frozen, move prawns and scallops to the fridge to thaw overnight; keep cold and pat dry before they go in the oven Thursday. They cook fast, so they stir into the orzo near the end."},
-      {step:"5",title:"Brown beef mince (Sunday)",detail:"Brown 3 mins, drain fat, cool and store. Sunday just layer into baking dish with spinach, kidney beans, tomatoes and eggs — reserve baby's portion before the paprika."},
+      {step:"5",title:"Freeze beef mince (Sunday)",detail:"Put the 800g beef mince for Sunday straight in the freezer on Monday. Move to the fridge on Friday evening to thaw overnight. Brown it on Sunday before assembling the bake — cooked mince stored from Monday wouldn't be safe by Sunday."},
       {step:"6",title:"Drain & bag kidney beans (Sunday)",detail:"Drain and rinse kidney beans. Bag separately in the fridge until Sunday."}
     ],
     textures:["Teriyaki salmon (Tuesday): flake the plain baby fillet very finely. Feel for pin bones every single time.","Pak choi: steam until leaves are completely wilted and stalk is fork-tender. Cut stalk into very small pieces.","Edamame: ALWAYS press flat — never whole.","Orzo (Thursday): cook until very soft. Small grain shape is easy for baby once tender.","Prawns & scallops (Thursday): cook fully to opaque / 63°C / 145°F but no further (they toughen). Remove any prawn tail, shell or vein, then finely mince both and stir through the soft orzo — never serve whole.","Beef bake (Sunday): mash kidney beans throughout. Break up any egg that has set in chunks. Red pepper should be very soft — peel if skin is still firm."],
