@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.jsx';
 
+function NutrBadge({label}) {
+  const c = NUTR_COLORS[label]||"#6b7280";
+  return <span style={{background:c+"18",color:c,border:`1px solid ${c}44`,borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700,display:"inline-block",margin:"2px"}}>{label}</span>;
+}
+function AllergenBadge({label}) {
+  const c = COLORS[label]||"#6b7280";
+  return <span style={{background:c+"22",color:c,border:`1px solid ${c}55`,borderRadius:"999px",padding:"2px 8px",fontSize:"11px",fontWeight:600,display:"inline-block",margin:"2px"}}>{label}</span>;
+}
+
 // Meals where ground beef or lamb needs a temp cue
 const GROUND_MEAT_TEMP = "160°F / 71°C";
 const GROUND_MEAT_MEALS = new Set([

@@ -5,15 +5,6 @@ const ALLERGENS = ["Egg","Peanut","Fish","Wheat","Tree Nuts","Soy","Sesame","Dai
 const COLORS = {"Egg":"#f59e0b","Peanut":"#92400e","Fish":"#0ea5e9","Wheat":"#d97706","Tree Nuts":"#16a34a","Soy":"#7c3aed","Sesame":"#dc2626","Dairy":"#6366f1","Shellfish":"#db2777","Molluscs":"#0d9488"};
 const NUTR_COLORS = {"Iron":"#dc2626","Zinc":"#7c3aed","Omega-3":"#0ea5e9","Vitamin C":"#f59e0b","Protein":"#16a34a","Healthy Fats":"#0d9488","Calcium":"#6366f1","Fibre":"#92400e"};
 
-function NutrBadge({label}) {
-  const c = NUTR_COLORS[label]||"#6b7280";
-  return <span style={{background:c+"18",color:c,border:`1px solid ${c}44`,borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700,display:"inline-block",margin:"2px"}}>{label}</span>;
-}
-function AllergenBadge({label}) {
-  const c = COLORS[label]||"#6b7280";
-  return <span style={{background:c+"22",color:c,border:`1px solid ${c}55`,borderRadius:"999px",padding:"2px 8px",fontSize:"11px",fontWeight:600,display:"inline-block",margin:"2px"}}>{label}</span>;
-}
-
 const WEEKS = [
   {
     title:"Week 1", nutritionFocus:"Iron & Omega-3 Foundation",
@@ -22,7 +13,7 @@ const WEEKS = [
     meals:[
       {
         day:"Tuesday", meal:"Sheet Pan Salmon & Lentil Tray with Roasted Red Pepper",
-        allergens:["Fish","Dairy"], nutrition:["Omega-3","Iron ","Vitamin C","Protein","Calcium"],
+        allergens:["Fish","Dairy"], nutrition:["Omega-3","Iron","Vitamin C","Protein","Calcium"],
         nutritionNotes:"Salmon = omega-3 DHA for brain. Lentils = plant iron. Red pepper = vitamin C which doubles iron absorption from lentils. Cream cheese adds calcium and healthy fats.",
         baby:true,
         recipe:{
