@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.js';
+import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.jsx';
 
 // Meals where ground beef or lamb needs a temp cue
 const GROUND_MEAT_TEMP = "160°F / 71°C";
@@ -125,10 +125,15 @@ export default function App() {
             {section==="meals" && (
               <div>
                 {week.meals.map((m,i)=>(
-                  <div key={i} style={{marginBottom:"14px",background:"#f8fafc",borderRadius:"12px",padding:"12px 14px",border:"1px solid #e2e8f0"}}>
+                  <button key={i} onClick={()=>goToRecipe(tab,i)} style={{display:"block",width:"100%",textAlign:"left",marginBottom:"14px",background:"#f8fafc",borderRadius:"12px",padding:"12px 14px",border:"1px solid #e2e8f0",cursor:"pointer",transition:"all 0.15s"}}
+                    onMouseEnter={e=>{e.currentTarget.style.background="#f0fdf4";e.currentTarget.style.borderColor="#166534";}}
+                    onMouseLeave={e=>{e.currentTarget.style.background="#f8fafc";e.currentTarget.style.borderColor="#e2e8f0";}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:"6px",marginBottom:"6px"}}>
                       <span style={{fontSize:"11px",fontWeight:700,color:"#166534",background:"#dcfce7",borderRadius:"6px",padding:"2px 8px"}}>{m.day}</span>
-                      <span style={{fontSize:"11px",color:"#6b7280"}}>🌡️ {m.recipe.temp} · ⏱️ {m.recipe.time}</span>
+                      <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
+                        <span style={{fontSize:"11px",color:"#6b7280"}}>🌡️ {m.recipe.temp} · ⏱️ {m.recipe.time}</span>
+                        <span style={{fontSize:"11px",color:"#16a34a",fontWeight:700}}>→ Recipe</span>
+                      </div>
                     </div>
                     <p style={{fontWeight:700,color:"#1e293b",fontSize:"13px",margin:"0 0 6px"}}>{m.meal}</p>
                     {GROUND_MEAT_MEALS.has(m.meal) && (
@@ -140,7 +145,7 @@ export default function App() {
                     <div style={{marginBottom:"5px"}}>{m.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
                     <p style={{fontSize:"11px",color:"#6b7280",margin:"4px 0 6px",lineHeight:1.5,fontStyle:"italic"}}>{m.nutritionNotes}</p>
                     <div>{m.allergens.map(a=><AllergenBadge key={a} label={a}/>)}</div>
-                  </div>
+                  </button>
                 ))}
               </div>
             )}
