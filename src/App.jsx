@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.js';
+import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.jsx';
 
 // Meals where ground beef or lamb needs a temp cue
 const GROUND_MEAT_TEMP = "160°F / 71°C";
