@@ -22,7 +22,7 @@ const WEEKS = [
     meals:[
       {
         day:"Tuesday", meal:"Sheet Pan Salmon & Lentil Tray with Roasted Red Pepper",
-        allergens:["Fish","Dairy"], nutrition:["Omega-3","Iron","Vitamin C","Protein","Calcium"],
+        allergens:["Fish","Dairy"], nutrition:["Omega-3","Iron ","Vitamin C","Protein","Calcium"],
         nutritionNotes:"Salmon = omega-3 DHA for brain. Lentils = plant iron. Red pepper = vitamin C which doubles iron absorption from lentils. Cream cheese adds calcium and healthy fats.",
         baby:true,
         recipe:{
