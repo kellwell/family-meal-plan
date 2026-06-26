@@ -422,13 +422,13 @@ const FLEX_RECIPES = [
   {
     title: "Lamb & Curry Lentils with Sweet Potato, Spinach & Peanut Butter",
     tag: "Stovetop · Batch & Freeze",
-    allergens: ["Dairy"],
+    allergens: ["Dairy","Wheat"],
     nutrition: ["Iron","Zinc","Vitamin C","Healthy Fats","Protein","Fibre"],
     nutritionNotes: "Lamb = highest zinc of any common meat + very high haem iron. Red lentils + spinach add a second and third iron source. Sweet potato and spinach provide vitamin C to boost absorption. Coconut milk adds healthy fats; a spoonful of yoghurt stirred through baby's portion adds calcium.",
     freezerNotes: "Freezes very well for up to 3 months — the lentils thicken further on reheating, so loosen with a splash of water or stock. Portion into individual freezer-safe pots before freezing so you can pull exactly what's needed for a night.",
     recipe: {
       serves: "4-6 adult servings, or stretch across multiple baby portions", time: "55 min",
-      ingredients: ["3 tbsp olive oil","500g lamb mince","1 pound sweet potatoes, peeled and cut into ¾-inch cubes","1 medium yellow onion, chopped","1 tbsp curry powder (mild)","3 garlic cloves, minced","1 tbsp fresh ginger, grated (or ½ tsp ginger powder)","1 tsp ground turmeric","1 cup red lentils, rinsed","4 cups low-sodium vegetable stock","1 (13-ounce) can full-fat coconut milk","1 (4-5 ounce) bag baby spinach","Full-fat plain yoghurt, for baby's portion","Fresh cilantro, for serving (adults)"],
+      ingredients: ["3 tbsp olive oil","500g lamb mince","1 pound sweet potatoes, peeled and cut into ¾-inch cubes","1 medium yellow onion, chopped","1 tbsp curry powder (mild)","3 garlic cloves, minced","1 tbsp fresh ginger, grated (or ½ tsp ginger powder)","1 tsp ground turmeric","1 cup red lentils, rinsed","4 cups low-sodium vegetable stock","1 (13-ounce) can full-fat coconut milk","1 (4-5 ounce) bag baby spinach","Full-fat plain yoghurt, for baby's portion","Fresh cilantro, for serving (adults)","Pitta bread or cooked brown rice, for serving (adults)"],
       steps: [
         "Heat 2 tbsp olive oil in a large pot or Dutch oven over medium-high. Add the sweet potato cubes and cook, stirring occasionally, until browned all over, 5-7 mins. Transfer to a plate and set aside.",
         "Add the lamb mince to the same pot and brown thoroughly over medium-high heat, breaking it up, until no pink remains, 8-10 mins. Drain any excess fat.",
@@ -437,7 +437,7 @@ const FLEX_RECIPES = [
         "Add the coconut milk and simmer, stirring occasionally, until the liquid has reduced and the lentils are creamy and falling apart, 15-20 mins.",
         "Add the spinach and stir until just wilted, 2-3 mins. Off the heat, season to taste.",
         "BABY: Take baby's portion before adding any salt to the adult batch. Mash lentils, lamb and sweet potato together so there are no large chunks. Stir in a spoonful of plain yoghurt for calcium. Sweet potato and spinach vitamin C boost the iron from lamb and lentils.",
-        "ADULTS: Season with salt to taste. Top with fresh cilantro."
+        "ADULTS: Season with salt to taste. Top with fresh cilantro and serve with warm pitta or brown rice."
       ],
       attribution: "Adapted from \"Red Curry Lentils With Sweet Potatoes and Spinach\" by Lidey Heuck, NYT Cooking — swapped curry paste and chile for curry powder and turmeric to remove heat, and added lamb mince for iron and zinc."
     },
