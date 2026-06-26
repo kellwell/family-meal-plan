@@ -180,9 +180,9 @@ const WEEKS = [
         nutritionNotes:"Beef = haem iron + zinc. Courgette and tomato = vitamin C to boost iron absorption. Soft polenta is gentle for baby and naturally smooth. Parmesan adds calcium. Adapted from Martha Rose Shulman's polenta with added beef for iron.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
+          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"1 hr",
           ingredients:["800g lean beef mince","4 courgettes, sliced into half-moons","4 tins (400g) chopped tomatoes","1 small onion, finely chopped","½ tsp garlic powder","1 tsp dried oregano","1 tsp dried basil","1 tbsp chopped fresh mint","500g cooked polenta, sliced","80g parmesan, grated","2 tbsp olive oil"],
-          steps:["Preheat oven to 190°C. Brown beef 3 mins, drain fat. Add onion, courgette, tomatoes, garlic, oregano and basil. Simmer 5 mins.","Oil a baking dish and layer polenta slices on the base. Top with the beef-courgette ragout. Scatter parmesan over.","Bake 30 mins until bubbling and golden.","BABY: Scoop a portion — polenta is naturally soft. Mash the ragout lightly, making sure courgette is very soft. Tomato vitamin C boosts beef iron. Use only a small amount of parmesan (sodium).","ADULTS: Serve with fresh mint scattered over."],
+          steps:["Preheat oven to 190°C. Brown beef 3 mins, drain fat. Add onion, courgette, tomatoes, garlic, oregano and basil. Simmer 5 mins.","Oil a baking dish and layer polenta slices on the base. Top with the beef-courgette ragout. Scatter parmesan over.","Bake 50–55 mins until bubbling all the way through and golden on top — there's a lot of fluid in the ragout to heat through, so it needs longer than you'd expect.","BABY: Scoop a portion — polenta is naturally soft. Mash the ragout lightly, making sure courgette is very soft. Tomato vitamin C boosts beef iron. Use only a small amount of parmesan (sodium).","ADULTS: Serve with fresh mint scattered over."],
           attribution:"Adapted from \"Polenta With Zucchini and Tomatoes\" by Martha Rose Shulman, NYT Cooking"
         }
       },
@@ -201,7 +201,7 @@ const WEEKS = [
     prepChecklist:[
       {step:"1",title:"Make miso glaze (Tuesday)",detail:"Mix white miso, mirin and sesame oil into a glaze. Store in a jar. On Tuesday brush over adult salmon — remember to reserve one plain fillet for baby first."},
       {step:"2",title:"Slice carrots & defrost edamame (Tuesday)",detail:"Slice carrots into coins, bag in fridge. Move edamame from freezer to fridge Monday evening."},
-      {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta."},
+      {step:"3",title:"Brown beef & prep ragout veg (Thursday)",detail:"Brown beef mince 3 mins, drain, cool and store. Slice courgettes and chop onion, bag separately. Thursday just combine and layer over polenta — bake runs about 1 hour now to fully heat through the fluid in the ragout, so plan for the longer cook time."},
       {step:"4",title:"Hard boil 2 eggs (Sunday)",detail:"Boil 10 mins. Cool, peel, store in fridge. Grate over baby's scallop portion on Sunday for extra iron."},
       {step:"5",title:"Freeze or fridge scallops (Sunday)",detail:"If buying fresh scallops on Monday, freeze them immediately and move to the fridge Friday evening to thaw overnight. If buying frozen, keep in freezer and move to fridge Friday. Pat dry before roasting Sunday."},
       {step:"6",title:"Grind almonds for topping",detail:"Pulse a small amount of almonds to fine crumbs. Store in a jar. Use as baby topping on Sunday for zinc and healthy fats."}
