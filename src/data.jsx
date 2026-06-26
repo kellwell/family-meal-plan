@@ -118,9 +118,9 @@ const WEEKS = [
         nutritionNotes:"Lamb = highest zinc of any common meat + very high haem iron. Lentils = iron + fibre. Courgette = vitamin C. Full-fat yoghurt = calcium + probiotics for gut health.",
         baby:true,
         recipe:{
-          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"45 min",
+          serves:"2 adults + baby — serves 2 nights", temp:"190°C / 375°F", time:"40 min",
           ingredients:["800g lamb mince","2 tins (400g) green lentils, drained","4 courgettes, sliced into half moons","2 tins (400g) chopped tomatoes","1 tsp dried rosemary, finely chopped","1 tsp dried thyme","½ tsp garlic powder","300g full-fat plain yoghurt","Pitta bread (adults)"],
-          steps:["Preheat oven to 190°C. Brown lamb in oven-proof pan 3 mins. Drain excess fat.","Add lentils, tomatoes, rosemary, thyme and garlic. Stir. Arrange courgette on top.","Transfer to oven. Bake uncovered 40 mins.","BABY: Scoop lamb and lentil mixture, mash lightly. No large chunks. Add a spoonful of plain yoghurt for calcium. Courgette provides vitamin C to boost iron from lamb and lentils.","ADULTS: Serve with pitta and mint yoghurt."]
+          steps:["Preheat oven to 190°C. Brown lamb in an oven-proof pan over medium-high heat, breaking it up as it cooks, until fully browned all over with no pink remaining (8–10 mins — a quick sear leaves it underdone going into the oven, so don't rush this). Drain excess fat.","Add lentils, tomatoes, rosemary, thyme and garlic. Stir. Arrange courgette on top.","Transfer to oven. Bake uncovered 25–30 mins, until piping hot throughout (71°C / 160°F) and courgette is soft.","BABY: Scoop lamb and lentil mixture, mash lightly. No large chunks. Add a spoonful of plain yoghurt for calcium. Courgette provides vitamin C to boost iron from lamb and lentils.","ADULTS: Serve with pitta and mint yoghurt."]
         }
       },
       {
@@ -366,16 +366,16 @@ const GROCERY_LISTS = [
     { name: "🧀 Dairy & Eggs", items: ["100g full-fat cream cheese","Parmesan (80g)","2 eggs","Butter"] },
     { name: "🌾 Grains & Pasta", items: ["400g pasta (penne or fusilli)","60g breadcrumbs"] },
     { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)","Smooth peanut butter (no added salt/sugar)","2 tbsp Dijon mustard"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Onion powder","Dried thyme","Dried oregano","Dried basil","Ginger powder"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Garlic powder","Onion powder","Dried thyme","Dried oregano","Dried basil","Ginger powder","Smoked paprika"] },
   ]},
   { week: 2, categories: [
-    { name: "🥦 Fresh Veg", items: ["1 large butternut squash","600g cherry tomatoes","400g broccoli florets"] },
+    { name: "🥦 Fresh Veg", items: ["1 large butternut squash","600g cherry tomatoes","400g broccoli florets","4 cloves garlic","1 lemon"] },
     { name: "🥩 Meat & Fish", items: ["4 trout fillets","400g raw prawns (peeled, deveined, no added salt)","4 chicken breasts (for Sunday)"] },
     { name: "🧀 Dairy & Eggs", items: ["160g feta cheese","6 eggs","Full-fat plain yoghurt"] },
     { name: "🌾 Grains & Pasta", items: ["400g quinoa","Brown rice (large bag — large batch needed)"] },
-    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chickpeas (400g each)","4 tbsp tahini"] },
+    { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","2 tins chickpeas (400g each)","4 tbsp tahini","800ml low-sodium vegetable stock"] },
     { name: "🥜 Nuts & Seeds", items: ["100g walnuts","100g cashews","Ground sesame seeds (jar)"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup","Garlic powder","Dried thyme","Mild curry powder","Dried rosemary"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Maple syrup","Garlic powder","Dried thyme","Dried rosemary","Smoked paprika"] },
   ]},
   { week: 3, categories: [
     { name: "🥦 Fresh Veg", items: ["4 courgettes","200g shiitake mushrooms","200g baby spinach","400g broccoli florets","400g frozen edamame"] },
@@ -384,7 +384,7 @@ const GROCERY_LISTS = [
     { name: "🌾 Grains & Pasta", items: ["400g soba noodles","Brown rice (large bag — large batch needed)"] },
     { name: "🥫 Tins & Jars", items: ["2 tins green lentils (400g each)","4 tins chopped tomatoes (400g each)"] },
     { name: "🥜 Nuts & Seeds", items: ["Cashews (to grind, small amount)","Ground sesame seeds"] },
-    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)"] },
+    { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Sesame oil","Mirin","Garlic powder","Dried rosemary","Dried thyme","Ginger powder","Pitta bread (adults)","Maple syrup"] },
   ]},
   { week: 4, categories: [
     { name: "🥦 Fresh Veg", items: ["8 large carrots","4 courgettes","1 small onion","4 medium sweet potatoes","400g frozen peas","400g frozen edamame","1 lemon"] },
@@ -405,7 +405,7 @@ const GROCERY_LISTS = [
     { name: "🫙 Pantry & Oils", items: ["Olive oil","Low-sodium soy sauce","Mirin","Garlic powder","Ginger powder","Dried tarragon"] },
   ]},
   { week: 6, categories: [
-    { name: "🥦 Fresh Veg", items: ["4 heads pak choi","400g frozen edamame","4 scallions","250g baby spinach","200g baby spinach (Sunday bake)","4 red peppers","400g frozen peas","Fresh dill","1 lemon"] },
+    { name: "🥦 Fresh Veg", items: ["4 heads pak choi","400g frozen edamame","4 scallions","250g baby spinach","200g baby spinach (Sunday bake)","4 red peppers","400g frozen peas","Fresh dill","1 lemon","2 cloves garlic"] },
     { name: "🥩 Meat & Fish", items: ["4 salmon fillets (150g each)","800g lean beef mince","250g raw prawns (peeled, deveined)","12 scallops (roe removed)"] },
     { name: "🧀 Dairy & Eggs", items: ["160g feta","100g cheddar","3 eggs"] },
     { name: "🌾 Grains & Pasta", items: ["300g orzo"] },
@@ -416,4 +416,54 @@ const GROCERY_LISTS = [
 ];
 
 
-export { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS };
+// Flex recipes: useful batch-cook / freezer recipes that sit outside the strict
+// 6-week oven-first rotation and allergen tracker. Stovetop is fine here.
+const FLEX_RECIPES = [
+  {
+    title: "Lamb & Curry Lentils with Sweet Potato, Spinach & Peanut Butter",
+    tag: "Stovetop · Batch & Freeze",
+    allergens: ["Dairy"],
+    nutrition: ["Iron","Zinc","Vitamin C","Healthy Fats","Protein","Fibre"],
+    nutritionNotes: "Lamb = highest zinc of any common meat + very high haem iron. Red lentils + spinach add a second and third iron source. Sweet potato and spinach provide vitamin C to boost absorption. Coconut milk adds healthy fats; a spoonful of yoghurt stirred through baby's portion adds calcium.",
+    freezerNotes: "Freezes very well for up to 3 months — the lentils thicken further on reheating, so loosen with a splash of water or stock. Portion into individual freezer-safe pots before freezing so you can pull exactly what's needed for a night.",
+    recipe: {
+      serves: "4-6 adult servings, or stretch across multiple baby portions", time: "55 min",
+      ingredients: ["3 tbsp olive oil","500g lamb mince","1 pound sweet potatoes, peeled and cut into ¾-inch cubes","1 medium yellow onion, chopped","1 tbsp curry powder (mild)","3 garlic cloves, minced","1 tbsp fresh ginger, grated (or ½ tsp ginger powder)","1 tsp ground turmeric","1 cup red lentils, rinsed","4 cups low-sodium vegetable stock","1 (13-ounce) can full-fat coconut milk","1 (4-5 ounce) bag baby spinach","Full-fat plain yoghurt, for baby's portion","Fresh cilantro, for serving (adults)"],
+      steps: [
+        "Heat 2 tbsp olive oil in a large pot or Dutch oven over medium-high. Add the sweet potato cubes and cook, stirring occasionally, until browned all over, 5-7 mins. Transfer to a plate and set aside.",
+        "Add the lamb mince to the same pot and brown thoroughly over medium-high heat, breaking it up, until no pink remains, 8-10 mins. Drain any excess fat.",
+        "Add the remaining 1 tbsp olive oil, then the onion, and reduce heat to medium-low. Cook, stirring occasionally, until translucent, 4-6 mins. Add curry powder, garlic, ginger and turmeric, and cook until fragrant, about 1 minute.",
+        "Add the lentils, stock and browned sweet potatoes. Bring to a boil over high heat, then lower the heat and simmer uncovered, stirring occasionally, until the lentils are just tender, 20-25 mins.",
+        "Add the coconut milk and simmer, stirring occasionally, until the liquid has reduced and the lentils are creamy and falling apart, 15-20 mins.",
+        "Add the spinach and stir until just wilted, 2-3 mins. Off the heat, season to taste.",
+        "BABY: Take baby's portion before adding any salt to the adult batch. Mash lentils, lamb and sweet potato together so there are no large chunks. Stir in a spoonful of plain yoghurt for calcium. Sweet potato and spinach vitamin C boost the iron from lamb and lentils.",
+        "ADULTS: Season with salt to taste. Top with fresh cilantro."
+      ],
+      attribution: "Adapted from \"Red Curry Lentils With Sweet Potatoes and Spinach\" by Lidey Heuck, NYT Cooking — swapped curry paste and chile for curry powder and turmeric to remove heat, and added lamb mince for iron and zinc."
+    },
+    textures: ["Lentils break down very soft once simmered — ideal base texture for baby.", "Mash lamb and sweet potato into the lentils so there are no separate chunks.", "Spinach wilts fully — no tough stems to worry about.", "Stir yoghurt through baby's portion only, off the heat, so it doesn't split."]
+  },
+  {
+    title: "No-Knead Bread",
+    tag: "Oven · Long Rest · Batch & Freeze",
+    allergens: ["Wheat"],
+    nutrition: ["Fibre"],
+    nutritionNotes: "A plain wholesome loaf rather than a nutrition-dense meal — mainly useful as a long-lasting bread to keep on hand. Soft interior pieces work well as a baby finger food once cooled, paired with mashed avocado or cream cheese for healthy fats and calcium.",
+    freezerNotes: "Freezes beautifully whole or pre-sliced for up to 3 months — slice before freezing so you can pull out just what you need and toast straight from frozen. Not a Monday-prep recipe: the dough needs 12-18 hours' rest at room temperature, so start it the evening before a weekend bake.",
+    recipe: {
+      serves: "One 1½-pound loaf", temp: "450°F / 230°C", time: "1 hr 30 min active, plus about 20 hr resting",
+      ingredients: ["3⅓ cups / 430g all-purpose or bread flour, plus more for dusting","Generous ¼ tsp / 1g instant yeast","2 tsp / 8g kosher salt","Cornmeal or wheat bran, as needed"],
+      steps: [
+        "In a large bowl, combine flour, yeast and salt. Add 1½ cups / 345g water and stir until blended; dough will be shaggy and sticky. Cover bowl with plastic wrap. Let dough rest at least 12 hours, preferably about 18, at warm room temperature, about 70°F / 21°C.",
+        "Dough is ready when its surface is dotted with bubbles. Lightly flour a work surface and place dough on it; sprinkle with a little more flour and fold it over on itself once or twice. Cover loosely with plastic wrap and let rest about 15 minutes.",
+        "Using just enough flour to keep dough from sticking to the work surface or your fingers, gently and quickly shape dough into a ball. Generously coat a cotton towel (not terry cloth) with flour, wheat bran or cornmeal; put dough seam side down on towel and dust with more flour, bran or cornmeal. Cover with another cotton towel and let rise about 2 hours, until more than double in size and not readily springing back when poked with a finger.",
+        "At least a half-hour before dough is ready, heat oven to 450°F / 230°C. Put a 6- to 8-quart heavy covered pot (cast iron, enamel, Pyrex or ceramic) in the oven as it heats. When dough is ready, carefully remove the pot from the oven. Slide your hand under the towel and turn dough over into the pot, seam side up — it may look messy, but that's fine. Shake the pot once or twice if dough is unevenly distributed; it will straighten out as it bakes.",
+        "Cover with the lid and bake 30 minutes, then remove the lid and bake another 15 to 30 minutes, until the loaf is beautifully browned. Cool completely on a rack before slicing."
+      ],
+      attribution: "Recipe from Jim Lahey, Sullivan Street Bakery, adapted by Mark Bittman, NYT Cooking — reproduced as written, no banned seasonings involved."
+    },
+    textures: ["Once fully cooled, slice and offer the soft interior (crusts can be tough/sharp-edged for early eaters — trim if needed).", "Good base for soft toast fingers with mashed avocado or cream cheese.", "Avoid serving warm/fresh — bread compresses into a denser, stickier texture that's harder for baby to manage; let it cool and slightly firm up first."]
+  }
+];
+
+export { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS, FLEX_RECIPES };

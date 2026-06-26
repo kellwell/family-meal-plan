@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS } from './data.jsx';
+import { ALLERGENS, COLORS, NUTR_COLORS, WEEKS, ALL_MEALS, CORE_SNACKS, WEEKLY_SNACKS, GROCERY_LISTS, FLEX_RECIPES } from './data.jsx';
 
 function NutrBadge({label}) {
   const c = NUTR_COLORS[label]||"#6b7280";
@@ -25,7 +25,8 @@ export default function App() {
   const [section, setSection] = useState("meals");
   const [glossaryTarget, setGlossaryTarget] = useState(null);
   const [checked, setChecked] = useState({});
-  const week = WEEKS[tab];
+  const isFlex = tab === "flex";
+  const week = isFlex ? null : WEEKS[tab];
 
   const toggleItem = (key) => setChecked(prev => ({...prev, [key]: !prev[key]}));
   const clearChecked = (weekNum) => setChecked(prev => {
@@ -95,15 +96,21 @@ export default function App() {
                 Week {i+1}
               </button>
             ))}
+            <button onClick={()=>{setTab("flex");setGlossaryTarget(null);}} style={{padding:"8px 16px",borderRadius:"999px",border:"none",cursor:"pointer",fontWeight:700,fontSize:"12px",background:tab==="flex"?"#166534":"white",color:tab==="flex"?"white":"#374151",boxShadow:tab==="flex"?"0 4px 12px #16653440":"0 1px 4px rgba(0,0,0,0.08)",transition:"all 0.15s"}}>
+              🧊 Flex Recipes
+            </button>
           </div>
 
-          {/* Section tabs */}
+          {/* Section tabs (hidden in Flex Recipes mode) */}
           <div className="no-print" style={{display:"flex",gap:"5px",marginBottom:"10px",flexWrap:"wrap",alignItems:"center"}}>
-            {SECTIONS.map(([id,label])=>(
+            {!isFlex && SECTIONS.map(([id,label])=>(
               <button key={id} onClick={()=>{setSection(id);setGlossaryTarget(null);}} style={{padding:"6px 12px",borderRadius:"8px",border:`1px solid ${section===id?"#166534":"#e2e8f0"}`,cursor:"pointer",fontSize:"11px",fontWeight:600,background:section===id?"#f0fdf4":"white",color:section===id?"#166534":"#6b7280",transition:"all 0.15s"}}>
                 {label}
               </button>
             ))}
+            {isFlex && (
+              <p style={{fontSize:"11px",color:"#6b7280",margin:0}}>🧊 Stovetop-friendly recipes to batch cook and freeze — outside the weekly oven-first rotation and not counted in the allergen tracker.</p>
+            )}
             {/* Print button */}
             <button onClick={handlePrint} style={{marginLeft:"auto",padding:"6px 14px",borderRadius:"8px",border:"1px solid #e2e8f0",cursor:"pointer",fontSize:"11px",fontWeight:600,background:"white",color:"#6b7280",display:"flex",alignItems:"center",gap:"5px",transition:"all 0.15s"}}
               onMouseEnter={e=>{e.currentTarget.style.background="#f0fdf4";e.currentTarget.style.borderColor="#166534";e.currentTarget.style.color="#166534";}}
@@ -112,8 +119,8 @@ export default function App() {
             </button>
           </div>
 
-          {/* Nutrition banner (not on glossary or babyprep) */}
-          {section !== "glossary" && section !== "babyprep" && (
+          {/* Nutrition banner (not on glossary, babyprep, or flex) */}
+          {!isFlex && section !== "glossary" && section !== "babyprep" && (
             <>
               <div style={{background:"#166534",borderRadius:"10px",padding:"10px 14px",marginBottom:"8px",display:"flex",gap:"8px",alignItems:"flex-start"}}>
                 <span style={{fontSize:"16px"}}>🎯</span>
@@ -129,6 +136,70 @@ export default function App() {
           )}
 
           <div style={{background:"white",borderRadius:"16px",padding:"20px",boxShadow:"0 4px 24px rgba(0,0,0,0.07)",border:"1px solid #e2e8f0"}}>
+            {isFlex && (
+              <div>
+                {FLEX_RECIPES.map((r,i)=>(
+                  <div key={i} style={{marginBottom:"24px",borderBottom:i<FLEX_RECIPES.length-1?"2px solid #f1f5f9":"none",paddingBottom:"20px"}}>
+                    <div style={{display:"flex",flexWrap:"wrap",gap:"5px",alignItems:"center",marginBottom:"8px"}}>
+                      <h3 style={{color:"#14532d",fontSize:"15px",fontWeight:800,margin:"0 0 4px",width:"100%"}}>{r.title}</h3>
+                      <span style={{background:"#e0f2fe",color:"#0369a1",borderRadius:"6px",padding:"2px 8px",fontSize:"10px",fontWeight:700}}>{r.tag}</span>
+                      {r.recipe.temp && <span style={{background:"#dcfce7",color:"#166534",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>🌡️ {r.recipe.temp}</span>}
+                      <span style={{background:"#fef9c3",color:"#92400e",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>⏱️ {r.recipe.time}</span>
+                      <span style={{background:"#f0f9ff",color:"#0369a1",borderRadius:"6px",padding:"2px 7px",fontSize:"10px",fontWeight:700}}>👨‍👩‍👶 {r.recipe.serves}</span>
+                    </div>
+                    <div style={{marginBottom:"8px"}}>{r.allergens.map(a=><AllergenBadge key={a} label={a}/>)}</div>
+                    <div style={{background:"#f0fdf4",borderRadius:"8px",padding:"8px 10px",marginBottom:"10px"}}>
+                      <p style={{fontSize:"10px",fontWeight:700,color:"#166534",margin:"0 0 3px",textTransform:"uppercase",letterSpacing:"0.05em"}}>Nutrition</p>
+                      <p style={{fontSize:"11px",color:"#374151",margin:"0 0 6px",lineHeight:1.5}}>{r.nutritionNotes}</p>
+                      <div>{r.nutrition.map(n=><NutrBadge key={n} label={n}/>)}</div>
+                    </div>
+                    <div style={{background:"#f0f9ff",border:"1px solid #bae6fd",borderRadius:"8px",padding:"8px 10px",marginBottom:"12px"}}>
+                      <p style={{fontSize:"10px",fontWeight:700,color:"#0369a1",margin:"0 0 3px",textTransform:"uppercase",letterSpacing:"0.05em"}}>❄️ Freezer notes</p>
+                      <p style={{fontSize:"11px",color:"#0c4a6e",margin:0,lineHeight:1.5}}>{r.freezerNotes}</p>
+                    </div>
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"12px"}}>
+                      <div>
+                        <p style={{fontSize:"10px",fontWeight:700,color:"#475569",textTransform:"uppercase",letterSpacing:"0.05em",margin:"0 0 6px"}}>Ingredients</p>
+                        {r.recipe.ingredients.map((ing,j)=>(
+                          <div key={j} style={{display:"flex",gap:"6px",marginBottom:"4px"}}>
+                            <span style={{color:"#16a34a",fontWeight:800,flexShrink:0,fontSize:"12px"}}>•</span>
+                            <span style={{fontSize:"11px",color:"#374151"}}>{ing}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div>
+                        <p style={{fontSize:"10px",fontWeight:700,color:"#475569",textTransform:"uppercase",letterSpacing:"0.05em",margin:"0 0 6px"}}>Steps</p>
+                        {r.recipe.steps.map((step,j)=>{
+                          const isBaby=step.startsWith("BABY");
+                          const isAdult=step.startsWith("ADULT");
+                          return (
+                            <div key={j} style={{display:"flex",gap:"6px",marginBottom:"7px",alignItems:"flex-start"}}>
+                              <span style={{background:isBaby?"#fef9c3":isAdult?"#dbeafe":"#dcfce7",color:isBaby?"#92400e":isAdult?"#1d4ed8":"#166534",borderRadius:"50%",width:"18px",height:"18px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"9px",fontWeight:700,flexShrink:0,marginTop:"1px"}}>{j+1}</span>
+                              <span style={{fontSize:"11px",color:isBaby?"#92400e":isAdult?"#1d4ed8":"#374151",lineHeight:1.6,fontWeight:isBaby||isAdult?600:400}}>{step}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    {r.textures && (
+                      <div style={{marginTop:"12px"}}>
+                        <p style={{fontSize:"10px",fontWeight:700,color:"#475569",textTransform:"uppercase",letterSpacing:"0.05em",margin:"0 0 6px"}}>👶 Texture notes</p>
+                        {r.textures.map((t,j)=>(
+                          <div key={j} style={{display:"flex",gap:"6px",marginBottom:"5px",alignItems:"flex-start"}}>
+                            <span style={{fontSize:"12px",flexShrink:0}}>✋</span>
+                            <span style={{fontSize:"11px",color:"#374151",lineHeight:1.5}}>{t}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {r.recipe.attribution && (
+                      <p style={{fontSize:"10px",color:"#9ca3af",fontStyle:"italic",margin:"12px 0 0",lineHeight:1.5}}>{r.recipe.attribution}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+            {!isFlex && <>
 
             {/* MEALS TAB */}
             {section==="meals" && (
@@ -449,6 +520,7 @@ export default function App() {
               </div>
             )}
 
+          </>}
           </div>
         </div>
       </div>
